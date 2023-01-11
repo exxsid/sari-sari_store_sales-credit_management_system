@@ -32,6 +32,8 @@
             this.addProductButton = new System.Windows.Forms.Button();
             this.updateProductButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.searchBar = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,10 +42,10 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 53);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(620, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(620, 267);
             this.dataGridView1.TabIndex = 0;
             // 
             // addProductButton
@@ -80,11 +82,32 @@
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
             // 
+            // searchBar
+            // 
+            this.searchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBar.Location = new System.Drawing.Point(24, 19);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(526, 24);
+            this.searchBar.TabIndex = 4;
+            // 
+            // searchButton
+            // 
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.Location = new System.Drawing.Point(569, 17);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(75, 30);
+            this.searchButton.TabIndex = 5;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            // 
             // ManagerProductsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.searchBar);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.updateProductButton);
             this.Controls.Add(this.addProductButton);
@@ -93,6 +116,7 @@
             this.Size = new System.Drawing.Size(675, 403);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +126,7 @@
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Button updateProductButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.TextBox searchBar;
+        private System.Windows.Forms.Button searchButton;
     }
 }
