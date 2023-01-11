@@ -12,6 +12,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 {
     public partial class ManagerProductsUserControl : UserControl
     {
+
         public ManagerProductsUserControl()
         {
             InitializeComponent();
