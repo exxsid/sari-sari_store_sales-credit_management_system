@@ -37,6 +37,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // TODO: other pages
             this.managerSaleUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
+            this.managerUsersUserControl1.Hide();
 
             // set the username in the usernameLabel
             this.usernameLabel.Text = this.username;
@@ -55,6 +56,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // TODO: other pages
             this.managerSaleUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
+            this.managerUsersUserControl1.Hide();
         }
         #endregion
 
@@ -72,6 +74,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // TODO: other pages
             this.managerHomeUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
+            this.managerUsersUserControl1.Hide();
         }
         #endregion
 
@@ -89,6 +92,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // TODO: other pages
             this.managerHomeUserControl1.Hide();
             this.managerSaleUserControl1.Hide();
+            this.managerUsersUserControl1.Hide();
         }
         #endregion
 
@@ -101,7 +105,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
 
             // TODO: users page
             // show the users page
-
+            this.managerUsersUserControl1.Show();
+            this.managerUsersUserControl1.BringToFront();
             // then hide other page
             // TODO: other pages
             this.managerHomeUserControl1.Hide();
@@ -130,6 +135,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerHomeUserControl1.Hide();
             this.managerSaleUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
+            this.managerUsersUserControl1.Hide();
         }
 
         private void creditAnalyticsButton_Click(object sender, EventArgs e)
@@ -141,6 +147,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerHomeUserControl1.Hide();
             this.managerSaleUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
+            this.managerUsersUserControl1.Hide();
         }
         #endregion
 

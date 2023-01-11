@@ -44,9 +44,10 @@
             this.logoutButton = new FontAwesome.Sharp.IconButton();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.profileButton = new FontAwesome.Sharp.IconButton();
+            this.managerProductsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerProductsUserControl();
             this.managerSaleUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
             this.managerHomeUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl();
-            this.managerProductsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerProductsUserControl();
+            this.managerUsersUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerUsersUserControl();
             this.sideNavBar.SuspendLayout();
             this.analyticsSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -300,6 +301,15 @@
             this.profileButton.TabIndex = 0;
             this.profileButton.UseVisualStyleBackColor = true;
             // 
+            // managerProductsUserControl1
+            // 
+            this.managerProductsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.managerProductsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerProductsUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerProductsUserControl1.Name = "managerProductsUserControl1";
+            this.managerProductsUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerProductsUserControl1.TabIndex = 4;
+            // 
             // managerSaleUserControl1
             // 
             this.managerSaleUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
@@ -319,20 +329,23 @@
             this.managerHomeUserControl1.Size = new System.Drawing.Size(690, 428);
             this.managerHomeUserControl1.TabIndex = 2;
             // 
-            // managerProductsUserControl1
+            // managerUsersUserControl1
             // 
-            this.managerProductsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.managerProductsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.managerProductsUserControl1.Location = new System.Drawing.Point(194, 48);
-            this.managerProductsUserControl1.Name = "managerProductsUserControl1";
-            this.managerProductsUserControl1.Size = new System.Drawing.Size(690, 428);
-            this.managerProductsUserControl1.TabIndex = 4;
+            this.managerUsersUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.managerUsersUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerUsersUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managerUsersUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerUsersUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.managerUsersUserControl1.Name = "managerUsersUserControl1";
+            this.managerUsersUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerUsersUserControl1.TabIndex = 5;
             // 
             // ManagerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 476);
+            this.Controls.Add(this.managerUsersUserControl1);
             this.Controls.Add(this.managerProductsUserControl1);
             this.Controls.Add(this.managerSaleUserControl1);
             this.Controls.Add(this.managerHomeUserControl1);
@@ -372,5 +385,6 @@
         private Manager.ManagerHomeUserControl managerHomeUserControl1;
         private Manager.ManagerSaleUserControl managerSaleUserControl1;
         private Manager.ManagerProductsUserControl managerProductsUserControl1;
+        private Manager.ManagerUsersUserControl managerUsersUserControl1;
     }
 }
