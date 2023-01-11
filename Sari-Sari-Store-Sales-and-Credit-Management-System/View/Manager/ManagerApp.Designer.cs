@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerApp));
             this.sideNavBar = new System.Windows.Forms.Panel();
             this.analyticsSubMenu = new System.Windows.Forms.Panel();
             this.creditAnalyticsButton = new FontAwesome.Sharp.IconButton();
@@ -38,14 +39,15 @@
             this.saleButton = new FontAwesome.Sharp.IconButton();
             this.homeButton = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.brandName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.profileButton = new FontAwesome.Sharp.IconButton();
-            this.usernameLabel = new System.Windows.Forms.Label();
             this.logoutButton = new FontAwesome.Sharp.IconButton();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.profileButton = new FontAwesome.Sharp.IconButton();
             this.sideNavBar.SuspendLayout();
             this.analyticsSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -221,22 +223,22 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.brandName);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(194, 134);
             this.panel2.TabIndex = 2;
             // 
-            // brandName
+            // pictureBox1
             // 
-            this.brandName.AutoSize = true;
-            this.brandName.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brandName.Location = new System.Drawing.Point(48, 23);
-            this.brandName.Name = "brandName";
-            this.brandName.Size = new System.Drawing.Size(89, 25);
-            this.brandName.TabIndex = 0;
-            this.brandName.Text = "Mini-Mart";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -249,31 +251,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(690, 48);
             this.panel1.TabIndex = 1;
-            // 
-            // profileButton
-            // 
-            this.profileButton.FlatAppearance.BorderSize = 0;
-            this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profileButton.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.profileButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(224)))), ((int)(((byte)(239)))));
-            this.profileButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.profileButton.IconSize = 25;
-            this.profileButton.Location = new System.Drawing.Point(6, 8);
-            this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(70, 33);
-            this.profileButton.TabIndex = 0;
-            this.profileButton.UseVisualStyleBackColor = true;
-            // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(224)))), ((int)(((byte)(239)))));
-            this.usernameLabel.Location = new System.Drawing.Point(68, 14);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(83, 21);
-            this.usernameLabel.TabIndex = 1;
-            this.usernameLabel.Text = "user name";
             // 
             // logoutButton
             // 
@@ -294,6 +271,31 @@
             this.logoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.logoutButton.UseVisualStyleBackColor = true;
             // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(224)))), ((int)(((byte)(239)))));
+            this.usernameLabel.Location = new System.Drawing.Point(68, 14);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(83, 21);
+            this.usernameLabel.TabIndex = 1;
+            this.usernameLabel.Text = "user name";
+            // 
+            // profileButton
+            // 
+            this.profileButton.FlatAppearance.BorderSize = 0;
+            this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.profileButton.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.profileButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(224)))), ((int)(((byte)(239)))));
+            this.profileButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.profileButton.IconSize = 25;
+            this.profileButton.Location = new System.Drawing.Point(6, 8);
+            this.profileButton.Name = "profileButton";
+            this.profileButton.Size = new System.Drawing.Size(70, 33);
+            this.profileButton.TabIndex = 0;
+            this.profileButton.UseVisualStyleBackColor = true;
+            // 
             // ManagerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,7 +309,7 @@
             this.sideNavBar.ResumeLayout(false);
             this.analyticsSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -317,7 +319,6 @@
         #endregion
 
         private System.Windows.Forms.Panel sideNavBar;
-        private System.Windows.Forms.Label brandName;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton homeButton;
         private FontAwesome.Sharp.IconButton productsButton;
@@ -331,5 +332,6 @@
         private System.Windows.Forms.Label usernameLabel;
         private FontAwesome.Sharp.IconButton profileButton;
         private FontAwesome.Sharp.IconButton logoutButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
