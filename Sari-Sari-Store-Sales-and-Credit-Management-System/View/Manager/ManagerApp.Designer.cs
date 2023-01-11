@@ -44,12 +44,14 @@
             this.logoutButton = new FontAwesome.Sharp.IconButton();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.profileButton = new FontAwesome.Sharp.IconButton();
+            this.creditPaymentButton = new FontAwesome.Sharp.IconButton();
+            this.managerCreditAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditAnalyticsUserControl();
             this.managerSalesAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSalesAnalyticsUserControl();
             this.managerUsersUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerUsersUserControl();
             this.managerProductsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerProductsUserControl();
             this.managerSaleUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
             this.managerHomeUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl();
-            this.managerCreditAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditAnalyticsUserControl();
+            this.managerCreditPaymentUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditPaymentUserControl();
             this.sideNavBar.SuspendLayout();
             this.analyticsSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,6 +63,7 @@
             // 
             this.sideNavBar.AutoScroll = true;
             this.sideNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.sideNavBar.Controls.Add(this.creditPaymentButton);
             this.sideNavBar.Controls.Add(this.analyticsSubMenu);
             this.sideNavBar.Controls.Add(this.analyticsButton);
             this.sideNavBar.Controls.Add(this.usersButton);
@@ -84,7 +87,7 @@
             this.analyticsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.analyticsSubMenu.Location = new System.Drawing.Point(0, 384);
             this.analyticsSubMenu.Name = "analyticsSubMenu";
-            this.analyticsSubMenu.Size = new System.Drawing.Size(194, 90);
+            this.analyticsSubMenu.Size = new System.Drawing.Size(177, 90);
             this.analyticsSubMenu.TabIndex = 8;
             // 
             // creditAnalyticsButton
@@ -100,7 +103,7 @@
             this.creditAnalyticsButton.Location = new System.Drawing.Point(0, 38);
             this.creditAnalyticsButton.Name = "creditAnalyticsButton";
             this.creditAnalyticsButton.Padding = new System.Windows.Forms.Padding(25, 0, 10, 0);
-            this.creditAnalyticsButton.Size = new System.Drawing.Size(194, 38);
+            this.creditAnalyticsButton.Size = new System.Drawing.Size(177, 38);
             this.creditAnalyticsButton.TabIndex = 9;
             this.creditAnalyticsButton.Text = "Credits Analytics";
             this.creditAnalyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -120,7 +123,7 @@
             this.salesAnalyticsButton.Location = new System.Drawing.Point(0, 0);
             this.salesAnalyticsButton.Name = "salesAnalyticsButton";
             this.salesAnalyticsButton.Padding = new System.Windows.Forms.Padding(25, 0, 10, 0);
-            this.salesAnalyticsButton.Size = new System.Drawing.Size(194, 38);
+            this.salesAnalyticsButton.Size = new System.Drawing.Size(177, 38);
             this.salesAnalyticsButton.TabIndex = 8;
             this.salesAnalyticsButton.Text = "Sales Analytics";
             this.salesAnalyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -140,7 +143,7 @@
             this.analyticsButton.Location = new System.Drawing.Point(0, 334);
             this.analyticsButton.Name = "analyticsButton";
             this.analyticsButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.analyticsButton.Size = new System.Drawing.Size(194, 50);
+            this.analyticsButton.Size = new System.Drawing.Size(177, 50);
             this.analyticsButton.TabIndex = 7;
             this.analyticsButton.Text = "Analytics";
             this.analyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -160,7 +163,7 @@
             this.usersButton.Location = new System.Drawing.Point(0, 284);
             this.usersButton.Name = "usersButton";
             this.usersButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.usersButton.Size = new System.Drawing.Size(194, 50);
+            this.usersButton.Size = new System.Drawing.Size(177, 50);
             this.usersButton.TabIndex = 6;
             this.usersButton.Text = "Users";
             this.usersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,7 +183,7 @@
             this.productsButton.Location = new System.Drawing.Point(0, 234);
             this.productsButton.Name = "productsButton";
             this.productsButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.productsButton.Size = new System.Drawing.Size(194, 50);
+            this.productsButton.Size = new System.Drawing.Size(177, 50);
             this.productsButton.TabIndex = 5;
             this.productsButton.Text = "Products";
             this.productsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -200,7 +203,7 @@
             this.saleButton.Location = new System.Drawing.Point(0, 184);
             this.saleButton.Name = "saleButton";
             this.saleButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.saleButton.Size = new System.Drawing.Size(194, 50);
+            this.saleButton.Size = new System.Drawing.Size(177, 50);
             this.saleButton.TabIndex = 4;
             this.saleButton.Text = "Sale";
             this.saleButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -220,7 +223,7 @@
             this.homeButton.Location = new System.Drawing.Point(0, 134);
             this.homeButton.Name = "homeButton";
             this.homeButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.homeButton.Size = new System.Drawing.Size(194, 50);
+            this.homeButton.Size = new System.Drawing.Size(177, 50);
             this.homeButton.TabIndex = 3;
             this.homeButton.Text = "Home";
             this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -233,7 +236,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 134);
+            this.panel2.Size = new System.Drawing.Size(177, 134);
             this.panel2.TabIndex = 2;
             // 
             // pictureBox1
@@ -303,6 +306,37 @@
             this.profileButton.TabIndex = 0;
             this.profileButton.UseVisualStyleBackColor = true;
             // 
+            // creditPaymentButton
+            // 
+            this.creditPaymentButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.creditPaymentButton.FlatAppearance.BorderSize = 0;
+            this.creditPaymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.creditPaymentButton.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.creditPaymentButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.creditPaymentButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.creditPaymentButton.IconSize = 25;
+            this.creditPaymentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.creditPaymentButton.Location = new System.Drawing.Point(0, 474);
+            this.creditPaymentButton.Name = "creditPaymentButton";
+            this.creditPaymentButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.creditPaymentButton.Size = new System.Drawing.Size(177, 50);
+            this.creditPaymentButton.TabIndex = 9;
+            this.creditPaymentButton.Text = "Credit Payment";
+            this.creditPaymentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.creditPaymentButton.UseVisualStyleBackColor = true;
+            this.creditPaymentButton.Click += new System.EventHandler(this.creditPaymentButton_Click);
+            // 
+            // managerCreditAnalyticsUserControl1
+            // 
+            this.managerCreditAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.managerCreditAnalyticsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerCreditAnalyticsUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managerCreditAnalyticsUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerCreditAnalyticsUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.managerCreditAnalyticsUserControl1.Name = "managerCreditAnalyticsUserControl1";
+            this.managerCreditAnalyticsUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerCreditAnalyticsUserControl1.TabIndex = 7;
+            // 
             // managerSalesAnalyticsUserControl1
             // 
             this.managerSalesAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
@@ -353,22 +387,23 @@
             this.managerHomeUserControl1.Size = new System.Drawing.Size(690, 428);
             this.managerHomeUserControl1.TabIndex = 2;
             // 
-            // managerCreditAnalyticsUserControl1
+            // managerCreditPaymentUserControl1
             // 
-            this.managerCreditAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.managerCreditAnalyticsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.managerCreditAnalyticsUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerCreditAnalyticsUserControl1.Location = new System.Drawing.Point(194, 48);
-            this.managerCreditAnalyticsUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.managerCreditAnalyticsUserControl1.Name = "managerCreditAnalyticsUserControl1";
-            this.managerCreditAnalyticsUserControl1.Size = new System.Drawing.Size(690, 428);
-            this.managerCreditAnalyticsUserControl1.TabIndex = 7;
+            this.managerCreditPaymentUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.managerCreditPaymentUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerCreditPaymentUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managerCreditPaymentUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerCreditPaymentUserControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.managerCreditPaymentUserControl1.Name = "managerCreditPaymentUserControl1";
+            this.managerCreditPaymentUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerCreditPaymentUserControl1.TabIndex = 8;
             // 
             // ManagerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 476);
+            this.Controls.Add(this.managerCreditPaymentUserControl1);
             this.Controls.Add(this.managerCreditAnalyticsUserControl1);
             this.Controls.Add(this.managerSalesAnalyticsUserControl1);
             this.Controls.Add(this.managerUsersUserControl1);
@@ -414,5 +449,7 @@
         private Manager.ManagerUsersUserControl managerUsersUserControl1;
         private Manager.ManagerSalesAnalyticsUserControl managerSalesAnalyticsUserControl1;
         private Manager.ManagerCreditAnalyticsUserControl managerCreditAnalyticsUserControl1;
+        private FontAwesome.Sharp.IconButton creditPaymentButton;
+        private Manager.ManagerCreditPaymentUserControl managerCreditPaymentUserControl1;
     }
 }

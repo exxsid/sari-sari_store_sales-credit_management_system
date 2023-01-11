@@ -34,12 +34,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerHomeUserControl1.Show();
             this.managerHomeUserControl1.BringToFront();
             // then hide other page
-            // TODO: other pages
             this.managerSaleUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
             this.managerUsersUserControl1.Hide();
             this.managerSalesAnalyticsUserControl1.Hide();
             this.managerCreditAnalyticsUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
 
             // set the username in the usernameLabel
             this.usernameLabel.Text = this.username;
@@ -55,12 +55,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerHomeUserControl1.Show();
             this.managerHomeUserControl1.BringToFront();
             // then hide other page
-            // TODO: other pages
             this.managerSaleUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
             this.managerUsersUserControl1.Hide();
             this.managerSalesAnalyticsUserControl1.Hide();
             this.managerCreditAnalyticsUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
         }
         #endregion
 
@@ -75,12 +75,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerSaleUserControl1.Show();
             this.managerSaleUserControl1.BringToFront();
             // then hide other page
-            // TODO: other pages
             this.managerHomeUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
             this.managerUsersUserControl1.Hide();
             this.managerSalesAnalyticsUserControl1.Hide();
             this.managerCreditAnalyticsUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
         }
         #endregion
 
@@ -95,12 +95,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerProductsUserControl1.Show();
             this.managerProductsUserControl1.BringToFront();
             // then hide other page
-            // TODO: other pages
             this.managerHomeUserControl1.Hide();
             this.managerSaleUserControl1.Hide();
             this.managerUsersUserControl1.Hide();
             this.managerSalesAnalyticsUserControl1.Hide();
             this.managerCreditAnalyticsUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
         }
         #endregion
 
@@ -115,12 +115,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerUsersUserControl1.Show();
             this.managerUsersUserControl1.BringToFront();
             // then hide other page
-            // TODO: other pages
             this.managerHomeUserControl1.Hide();
             this.managerSaleUserControl1.Hide();
             this.managerProductsUserControl1.Hide();
             this.managerSalesAnalyticsUserControl1.Hide();
             this.managerCreditAnalyticsUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
         }
         #endregion
 
@@ -137,7 +137,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
 
         private void salesAnalyticsButton_Click(object sender, EventArgs e)
         {
-            // TODO: place it in specific analytics
             // show the analytics page
             this.managerSalesAnalyticsUserControl1.Show();
             this.managerSalesAnalyticsUserControl1.BringToFront();
@@ -147,11 +146,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerProductsUserControl1.Hide();
             this.managerUsersUserControl1.Hide();
             this.managerCreditAnalyticsUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
         }
 
         private void creditAnalyticsButton_Click(object sender, EventArgs e)
         {
-            // TODO: place it in specific analytics
+            
             // show the analytics page
             this.managerCreditAnalyticsUserControl1.Show();
             this.managerCreditAnalyticsUserControl1.BringToFront();
@@ -161,6 +161,24 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             this.managerProductsUserControl1.Hide();
             this.managerUsersUserControl1.Hide();
             this.managerSalesAnalyticsUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
+        }
+        #endregion
+
+        #region credit payment
+        private void creditPaymentButton_Click(object sender, EventArgs e)
+        {
+
+            // show the analytics page
+            this.managerCreditPaymentUserControl1.Show();
+            this.managerCreditPaymentUserControl1.BringToFront();
+            // then hide other page
+            this.managerHomeUserControl1.Hide();
+            this.managerSaleUserControl1.Hide();
+            this.managerProductsUserControl1.Hide();
+            this.managerUsersUserControl1.Hide();
+            this.managerSalesAnalyticsUserControl1.Hide();
+            this.managerCreditAnalyticsUserControl1.Hide();
         }
         #endregion
 
@@ -230,5 +248,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             }
         }
 
+        
     }
 }
