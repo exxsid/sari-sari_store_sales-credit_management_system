@@ -137,7 +137,5 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
                 button.BackColor = NONACTIVE_BUTTON_BACK_COLOR;
             }
         }
-
-       
     }
 }
