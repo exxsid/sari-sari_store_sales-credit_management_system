@@ -44,6 +44,7 @@
             this.logoutButton = new FontAwesome.Sharp.IconButton();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.profileButton = new FontAwesome.Sharp.IconButton();
+            this.managerSaleUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
             this.managerHomeUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl();
             this.sideNavBar.SuspendLayout();
             this.analyticsSubMenu.SuspendLayout();
@@ -100,6 +101,7 @@
             this.creditAnalyticsButton.Text = "Credits Analytics";
             this.creditAnalyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.creditAnalyticsButton.UseVisualStyleBackColor = true;
+            this.creditAnalyticsButton.Click += new System.EventHandler(this.creditAnalyticsButton_Click);
             // 
             // salesAnalyticsButton
             // 
@@ -119,6 +121,7 @@
             this.salesAnalyticsButton.Text = "Sales Analytics";
             this.salesAnalyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.salesAnalyticsButton.UseVisualStyleBackColor = true;
+            this.salesAnalyticsButton.Click += new System.EventHandler(this.salesAnalyticsButton_Click);
             // 
             // analyticsButton
             // 
@@ -253,6 +256,7 @@
             // 
             // logoutButton
             // 
+            this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutButton.FlatAppearance.BorderSize = 0;
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutButton.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -295,6 +299,17 @@
             this.profileButton.TabIndex = 0;
             this.profileButton.UseVisualStyleBackColor = true;
             // 
+            // managerSaleUserControl1
+            // 
+            this.managerSaleUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.managerSaleUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerSaleUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managerSaleUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerSaleUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.managerSaleUserControl1.Name = "managerSaleUserControl1";
+            this.managerSaleUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerSaleUserControl1.TabIndex = 3;
+            // 
             // managerHomeUserControl1
             // 
             this.managerHomeUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -308,9 +323,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 476);
+            this.Controls.Add(this.managerSaleUserControl1);
             this.Controls.Add(this.managerHomeUserControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sideNavBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ManagerApp";
             this.Text = "ManagerApp";
             this.Load += new System.EventHandler(this.ManagerApp_Load);
@@ -342,5 +359,6 @@
         private FontAwesome.Sharp.IconButton logoutButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Manager.ManagerHomeUserControl managerHomeUserControl1;
+        private Manager.ManagerSaleUserControl managerSaleUserControl1;
     }
 }

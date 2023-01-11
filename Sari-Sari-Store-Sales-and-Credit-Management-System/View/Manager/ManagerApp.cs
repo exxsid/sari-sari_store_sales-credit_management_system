@@ -15,9 +15,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
         private System.Drawing.Color NONACTIVE_BUTTON_BACK_COLOR = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
         private System.Drawing.Color ACTIVE_BUTTON_BACK_COLOR = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
 
-        public ManagerApp()
+        private string username;
+
+        public ManagerApp(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         private void ManagerApp_Load(object sender, EventArgs e)
@@ -27,6 +30,15 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // at start time, home button is the defaul selected
             // set the home button's back color to active at start
             this.homeButton.BackColor = ACTIVE_BUTTON_BACK_COLOR;
+            // show the home page
+            this.managerHomeUserControl1.Show();
+            this.managerHomeUserControl1.BringToFront();
+            // then hide other page
+            // TODO: other pages
+            this.managerSaleUserControl1.Hide();
+
+            // set the username in the usernameLabel
+            this.usernameLabel.Text = this.username;
         }
 
         #region homeButton
@@ -37,8 +49,10 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             setToActiveButtonBackColor(this.homeButton);
             // show the home page
             this.managerHomeUserControl1.Show();
+            this.managerHomeUserControl1.BringToFront();
             // then hide other page
             // TODO: other pages
+            this.managerSaleUserControl1.Hide();
         }
         #endregion
 
@@ -49,9 +63,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // set the back color
             setToActiveButtonBackColor(this.saleButton);
 
+            // TODO: sale page
             // show the sale page
-
+            this.managerSaleUserControl1.Show();
+            this.managerSaleUserControl1.BringToFront();
             // then hide other page
+            // TODO: other pages
             this.managerHomeUserControl1.Hide();
         }
         #endregion
@@ -63,10 +80,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // set the back color
             setToActiveButtonBackColor(this.productsButton);
 
+            // TODO: products page
             // show the products page
 
             // then hide other page
+            // TODO: other pages
             this.managerHomeUserControl1.Hide();
+            this.managerSaleUserControl1.Hide();
         }
         #endregion
 
@@ -77,10 +97,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // set the back color
             setToActiveButtonBackColor(this.usersButton);
 
+            // TODO: users page
             // show the users page
 
             // then hide other page
+            // TODO: other pages
             this.managerHomeUserControl1.Hide();
+            this.managerSaleUserControl1.Hide();
         }
         #endregion
 
@@ -91,12 +114,28 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // set the back color
             setToActiveButtonBackColor(this.analyticsButton);
 
+            
+
+        }
+
+        private void salesAnalyticsButton_Click(object sender, EventArgs e)
+        {
             // TODO: place it in specific analytics
             // show the analytics page
 
             // then hide other page
             this.managerHomeUserControl1.Hide();
+            this.managerSaleUserControl1.Hide();
+        }
 
+        private void creditAnalyticsButton_Click(object sender, EventArgs e)
+        {
+            // TODO: place it in specific analytics
+            // show the analytics page
+
+            // then hide other page
+            this.managerHomeUserControl1.Hide();
+            this.managerSaleUserControl1.Hide();
         }
         #endregion
 
@@ -165,5 +204,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
                 button.BackColor = NONACTIVE_BUTTON_BACK_COLOR;
             }
         }
+
     }
 }
