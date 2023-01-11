@@ -124,6 +124,12 @@
     <Compile Include="View\Manager\ManagerApp.Designer.cs">
       <DependentUpon>ManagerApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Manager\ManagerCreditAnalyticsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Manager\ManagerCreditAnalyticsUserControl.Designer.cs">
+      <DependentUpon>ManagerCreditAnalyticsUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Manager\ManagerHomeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\ManagerApp.resx">
       <DependentUpon>ManagerApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\ManagerCreditAnalyticsUserControl.resx">
+      <DependentUpon>ManagerCreditAnalyticsUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\ManagerHomeUserControl.resx">
       <DependentUpon>ManagerHomeUserControl.cs</DependentUpon>

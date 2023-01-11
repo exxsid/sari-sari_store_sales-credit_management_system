@@ -44,11 +44,12 @@
             this.logoutButton = new FontAwesome.Sharp.IconButton();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.profileButton = new FontAwesome.Sharp.IconButton();
+            this.managerSalesAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSalesAnalyticsUserControl();
             this.managerUsersUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerUsersUserControl();
             this.managerProductsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerProductsUserControl();
             this.managerSaleUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
             this.managerHomeUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl();
-            this.managerSalesAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSalesAnalyticsUserControl();
+            this.managerCreditAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditAnalyticsUserControl();
             this.sideNavBar.SuspendLayout();
             this.analyticsSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -302,6 +303,17 @@
             this.profileButton.TabIndex = 0;
             this.profileButton.UseVisualStyleBackColor = true;
             // 
+            // managerSalesAnalyticsUserControl1
+            // 
+            this.managerSalesAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.managerSalesAnalyticsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerSalesAnalyticsUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managerSalesAnalyticsUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerSalesAnalyticsUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.managerSalesAnalyticsUserControl1.Name = "managerSalesAnalyticsUserControl1";
+            this.managerSalesAnalyticsUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerSalesAnalyticsUserControl1.TabIndex = 6;
+            // 
             // managerUsersUserControl1
             // 
             this.managerUsersUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
@@ -341,22 +353,23 @@
             this.managerHomeUserControl1.Size = new System.Drawing.Size(690, 428);
             this.managerHomeUserControl1.TabIndex = 2;
             // 
-            // managerSalesAnalyticsUserControl1
+            // managerCreditAnalyticsUserControl1
             // 
-            this.managerSalesAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.managerSalesAnalyticsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.managerSalesAnalyticsUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerSalesAnalyticsUserControl1.Location = new System.Drawing.Point(194, 48);
-            this.managerSalesAnalyticsUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.managerSalesAnalyticsUserControl1.Name = "managerSalesAnalyticsUserControl1";
-            this.managerSalesAnalyticsUserControl1.Size = new System.Drawing.Size(690, 428);
-            this.managerSalesAnalyticsUserControl1.TabIndex = 6;
+            this.managerCreditAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.managerCreditAnalyticsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerCreditAnalyticsUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managerCreditAnalyticsUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerCreditAnalyticsUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.managerCreditAnalyticsUserControl1.Name = "managerCreditAnalyticsUserControl1";
+            this.managerCreditAnalyticsUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerCreditAnalyticsUserControl1.TabIndex = 7;
             // 
             // ManagerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 476);
+            this.Controls.Add(this.managerCreditAnalyticsUserControl1);
             this.Controls.Add(this.managerSalesAnalyticsUserControl1);
             this.Controls.Add(this.managerUsersUserControl1);
             this.Controls.Add(this.managerProductsUserControl1);
@@ -400,5 +413,6 @@
         private Manager.ManagerProductsUserControl managerProductsUserControl1;
         private Manager.ManagerUsersUserControl managerUsersUserControl1;
         private Manager.ManagerSalesAnalyticsUserControl managerSalesAnalyticsUserControl1;
+        private Manager.ManagerCreditAnalyticsUserControl managerCreditAnalyticsUserControl1;
     }
 }
