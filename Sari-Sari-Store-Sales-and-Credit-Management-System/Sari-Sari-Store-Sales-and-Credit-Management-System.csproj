@@ -105,12 +105,6 @@
     <Compile Include="CashierDash.Designer.cs">
       <DependentUpon>CashierDash.cs</DependentUpon>
     </Compile>
-    <!--<Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>-->
     <Compile Include="Model\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,6 +166,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+	  <EmbeddedResource Include="Login.resx">
+		  <DependentUpon>Login.cs</DependentUpon>
+	  </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\ManagerApp.resx">
       <DependentUpon>ManagerApp.cs</DependentUpon>
     </EmbeddedResource>
