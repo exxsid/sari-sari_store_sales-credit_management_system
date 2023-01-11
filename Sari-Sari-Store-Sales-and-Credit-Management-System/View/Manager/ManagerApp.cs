@@ -103,7 +103,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // set the back color
             setToActiveButtonBackColor(this.usersButton);
 
-            // TODO: users page
             // show the users page
             this.managerUsersUserControl1.Show();
             this.managerUsersUserControl1.BringToFront();
