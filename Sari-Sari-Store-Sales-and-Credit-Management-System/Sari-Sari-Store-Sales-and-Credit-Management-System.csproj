@@ -129,6 +129,18 @@
     <Compile Include="View\Manager\ManagerHomeUserControl.Designer.cs">
       <DependentUpon>ManagerHomeUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Manager\ManagerProductsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Manager\ManagerProductsUserControl.Designer.cs">
+      <DependentUpon>ManagerProductsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manager\ManagerSaleUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Manager\ManagerSaleUserControl.Designer.cs">
+      <DependentUpon>ManagerSaleUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\ManagerHomeUserControl.resx">
       <DependentUpon>ManagerHomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\ManagerSaleUserControl.resx">
+      <DependentUpon>ManagerSaleUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
