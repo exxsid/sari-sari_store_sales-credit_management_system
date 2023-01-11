@@ -12,13 +12,16 @@ using MySql.Data.MySqlClient;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         string connect = "server=localhost;port=3306;user=root;password=12345;database=cms";
 
-        public Form1()
+        public Login()
         {
             InitializeComponent();
+
+            var color = System.Drawing.ColorTranslator.FromHtml("#03045E");
+            pictureBox1.BackColor = color;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             MySqlDataReader reader = command.ExecuteReader();
 
             if (reader.Read()) {
-                Form3 next = new Form3();
+                CashierDash next = new CashierDash();
                 next.Show();
                 this.Hide();
             } else {
@@ -48,11 +51,19 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             connection.Close();
         }
 
-        private void createAcc_Click(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            Form2 registration = new Form2();
-            this.Hide();
-            registration.Show();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

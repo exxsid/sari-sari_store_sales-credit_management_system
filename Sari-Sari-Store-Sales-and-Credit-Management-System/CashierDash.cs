@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 {
-    public partial class Form3 : Form
+    public partial class CashierDash : Form
     {
-        public Form3()
+        public CashierDash()
         {
             InitializeComponent();
         }
