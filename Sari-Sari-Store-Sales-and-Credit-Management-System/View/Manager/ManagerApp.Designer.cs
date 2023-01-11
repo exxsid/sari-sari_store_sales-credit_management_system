@@ -44,6 +44,7 @@
             this.logoutButton = new FontAwesome.Sharp.IconButton();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.profileButton = new FontAwesome.Sharp.IconButton();
+            this.managerHomeUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl();
             this.sideNavBar.SuspendLayout();
             this.analyticsSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -203,8 +204,6 @@
             // 
             this.homeButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.homeButton.FlatAppearance.BorderSize = 0;
-            this.homeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.homeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeButton.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.homeButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
@@ -296,11 +295,20 @@
             this.profileButton.TabIndex = 0;
             this.profileButton.UseVisualStyleBackColor = true;
             // 
+            // managerHomeUserControl1
+            // 
+            this.managerHomeUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerHomeUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerHomeUserControl1.Name = "managerHomeUserControl1";
+            this.managerHomeUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerHomeUserControl1.TabIndex = 2;
+            // 
             // ManagerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 476);
+            this.Controls.Add(this.managerHomeUserControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sideNavBar);
             this.Name = "ManagerApp";
@@ -333,5 +341,6 @@
         private FontAwesome.Sharp.IconButton profileButton;
         private FontAwesome.Sharp.IconButton logoutButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Manager.ManagerHomeUserControl managerHomeUserControl1;
     }
 }

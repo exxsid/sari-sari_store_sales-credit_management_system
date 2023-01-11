@@ -24,6 +24,9 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
         {
             // hide the analytics submenu in load time
             this.analyticsSubMenu.Visible = false;
+            // at start time, home button is the defaul selected
+            // set the home button's back color to active at start
+            this.homeButton.BackColor = ACTIVE_BUTTON_BACK_COLOR;
         }
 
         #region homeButton
@@ -32,6 +35,10 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             hideSubMenu();
             // set the back color
             setToActiveButtonBackColor(this.homeButton);
+            // show the home page
+            this.managerHomeUserControl1.Show();
+            // then hide other page
+            // TODO: other pages
         }
         #endregion
 
@@ -41,6 +48,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             hideSubMenu();
             // set the back color
             setToActiveButtonBackColor(this.saleButton);
+
+            // show the sale page
+
+            // then hide other page
+            this.managerHomeUserControl1.Hide();
         }
         #endregion
 
@@ -50,6 +62,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             hideSubMenu();
             // set the back color
             setToActiveButtonBackColor(this.productsButton);
+
+            // show the products page
+
+            // then hide other page
+            this.managerHomeUserControl1.Hide();
         }
         #endregion
 
@@ -59,6 +76,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             hideSubMenu();
             // set the back color
             setToActiveButtonBackColor(this.usersButton);
+
+            // show the users page
+
+            // then hide other page
+            this.managerHomeUserControl1.Hide();
         }
         #endregion
 
@@ -68,6 +90,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             showSubMenu(this.analyticsSubMenu);
             // set the back color
             setToActiveButtonBackColor(this.analyticsButton);
+
+            // TODO: place it in specific analytics
+            // show the analytics page
+
+            // then hide other page
+            this.managerHomeUserControl1.Hide();
 
         }
         #endregion
