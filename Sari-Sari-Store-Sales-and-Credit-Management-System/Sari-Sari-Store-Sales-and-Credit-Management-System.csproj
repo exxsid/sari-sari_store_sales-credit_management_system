@@ -161,6 +161,9 @@
     <EmbeddedResource Include="View\Manager\ManagerHomeUserControl.resx">
       <DependentUpon>ManagerHomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\ManagerProductsUserControl.resx">
+      <DependentUpon>ManagerProductsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\ManagerSaleUserControl.resx">
       <DependentUpon>ManagerSaleUserControl.cs</DependentUpon>
     </EmbeddedResource>
