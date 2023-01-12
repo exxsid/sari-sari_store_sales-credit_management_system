@@ -105,6 +105,7 @@
             this.quantityTextbox.Name = "quantityTextbox";
             this.quantityTextbox.Size = new System.Drawing.Size(109, 26);
             this.quantityTextbox.TabIndex = 6;
+            this.quantityTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.quantityTextbox_KeyPress);
             // 
             // quantityLabel
             // 

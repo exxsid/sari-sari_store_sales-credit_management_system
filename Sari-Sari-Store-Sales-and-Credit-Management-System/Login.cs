@@ -14,39 +14,53 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 {
     public partial class Login : Form
     {
-        string connect = "server=localhost;port=3306;user=root;password=12345;database=cms";
+        string connect = "server=localhost;port=3306;user=root;password='';database=minimart";
 
         public Login()
         {
             InitializeComponent();
-
-            var color = System.Drawing.ColorTranslator.FromHtml("#03045E");
-            pictureBox1.BackColor = color;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            string userName = inputUsername.Text;
+            string IDNumber = inputIDNumber.Text;
             string password = inputPassword.Text;
 
             MySqlConnection connection = new MySqlConnection(connect);
             connection.Open();
 
-            string query = "SELECT * FROM users WHERE Username = @username AND password = @password";
+            string query = "SELECT * FROM accounts WHERE IDNumber = @IDNumber AND password = @Password";
             
             MySqlCommand command = new MySqlCommand(query, connection);
-            command.Parameters.AddWithValue("@username", userName);
-            command.Parameters.AddWithValue("@password", password);
+            command.Parameters.AddWithValue("@IDNumber", IDNumber);
+            command.Parameters.AddWithValue("@Password", password);
 
             MySqlDataReader reader = command.ExecuteReader();
 
-            if (reader.Read()) {
-                CashierDash next = new CashierDash();
-                next.Show();
-                this.Hide();
-            } else {
-                MessageBox.Show("Error logging in!");
-            }
+            while (reader.Read()) {
+
+                string accountType = reader["AccountType"].ToString();
+                string name = reader["Name"].ToString();
+
+                if (accountType == "Manager")
+                {
+                    View.ManagerApp next = new View.ManagerApp(name);
+                    next.Show();
+                    this.Hide();
+
+                }
+                else if (accountType == "Cashier")
+                {
+                    CashierDash next = new CashierDash(name);
+                    next.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Error logging in!");
+                }
+
+            } 
 
             connection.Close();
         }

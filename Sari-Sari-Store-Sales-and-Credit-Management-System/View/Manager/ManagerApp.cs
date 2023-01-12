@@ -248,6 +248,9 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             }
         }
 
-        
+        private void usernameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

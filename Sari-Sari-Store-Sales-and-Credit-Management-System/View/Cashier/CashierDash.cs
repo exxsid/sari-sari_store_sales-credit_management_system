@@ -12,9 +12,16 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 {
     public partial class CashierDash : Form
     {
-        public CashierDash()
+        private string cashier;
+        public CashierDash(string cashier)
         {
             InitializeComponent();
+            this.cashier= cashier;
+        }
+
+        private void CashierDash_Load(object sender, EventArgs e)
+        {
+            usernameLabel.Text = cashier;
         }
     }
 }

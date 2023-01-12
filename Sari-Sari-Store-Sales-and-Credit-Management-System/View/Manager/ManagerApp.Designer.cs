@@ -30,21 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerApp));
             this.sideNavBar = new System.Windows.Forms.Panel();
-            this.analyticsSubMenu = new System.Windows.Forms.Panel();
-            this.creditAnalyticsButton = new FontAwesome.Sharp.IconButton();
-            this.salesAnalyticsButton = new FontAwesome.Sharp.IconButton();
             this.analyticsButton = new FontAwesome.Sharp.IconButton();
             this.usersButton = new FontAwesome.Sharp.IconButton();
             this.productsButton = new FontAwesome.Sharp.IconButton();
             this.saleButton = new FontAwesome.Sharp.IconButton();
-            this.homeButton = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoutButton = new FontAwesome.Sharp.IconButton();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.profileButton = new FontAwesome.Sharp.IconButton();
-            this.creditPaymentButton = new FontAwesome.Sharp.IconButton();
             this.managerCreditAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditAnalyticsUserControl();
             this.managerSalesAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSalesAnalyticsUserControl();
             this.managerUsersUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerUsersUserControl();
@@ -52,11 +47,16 @@
             this.managerSaleUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
             this.managerHomeUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl();
             this.managerCreditPaymentUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditPaymentUserControl();
+            this.homeButton = new FontAwesome.Sharp.IconButton();
+            this.salesAnalyticsButton = new FontAwesome.Sharp.IconButton();
+            this.creditAnalyticsButton = new FontAwesome.Sharp.IconButton();
+            this.analyticsSubMenu = new System.Windows.Forms.Panel();
+            this.creditPaymentButton = new FontAwesome.Sharp.IconButton();
             this.sideNavBar.SuspendLayout();
-            this.analyticsSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.analyticsSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideNavBar
@@ -78,57 +78,6 @@
             this.sideNavBar.Name = "sideNavBar";
             this.sideNavBar.Size = new System.Drawing.Size(194, 476);
             this.sideNavBar.TabIndex = 0;
-            // 
-            // analyticsSubMenu
-            // 
-            this.analyticsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(199)))));
-            this.analyticsSubMenu.Controls.Add(this.creditAnalyticsButton);
-            this.analyticsSubMenu.Controls.Add(this.salesAnalyticsButton);
-            this.analyticsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.analyticsSubMenu.Location = new System.Drawing.Point(0, 384);
-            this.analyticsSubMenu.Name = "analyticsSubMenu";
-            this.analyticsSubMenu.Size = new System.Drawing.Size(177, 90);
-            this.analyticsSubMenu.TabIndex = 8;
-            // 
-            // creditAnalyticsButton
-            // 
-            this.creditAnalyticsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.creditAnalyticsButton.FlatAppearance.BorderSize = 0;
-            this.creditAnalyticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.creditAnalyticsButton.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
-            this.creditAnalyticsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.creditAnalyticsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.creditAnalyticsButton.IconSize = 25;
-            this.creditAnalyticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.creditAnalyticsButton.Location = new System.Drawing.Point(0, 38);
-            this.creditAnalyticsButton.Name = "creditAnalyticsButton";
-            this.creditAnalyticsButton.Padding = new System.Windows.Forms.Padding(25, 0, 10, 0);
-            this.creditAnalyticsButton.Size = new System.Drawing.Size(177, 38);
-            this.creditAnalyticsButton.TabIndex = 9;
-            this.creditAnalyticsButton.Text = "Credits Analytics";
-            this.creditAnalyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.creditAnalyticsButton.UseVisualStyleBackColor = true;
-            this.creditAnalyticsButton.Click += new System.EventHandler(this.creditAnalyticsButton_Click);
-            // 
-            // salesAnalyticsButton
-            // 
-            this.salesAnalyticsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.salesAnalyticsButton.FlatAppearance.BorderSize = 0;
-            this.salesAnalyticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salesAnalyticsButton.IconChar = FontAwesome.Sharp.IconChar.CartShopping;
-            this.salesAnalyticsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.salesAnalyticsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.salesAnalyticsButton.IconSize = 25;
-            this.salesAnalyticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salesAnalyticsButton.Location = new System.Drawing.Point(0, 0);
-            this.salesAnalyticsButton.Name = "salesAnalyticsButton";
-            this.salesAnalyticsButton.Padding = new System.Windows.Forms.Padding(25, 0, 10, 0);
-            this.salesAnalyticsButton.Size = new System.Drawing.Size(177, 38);
-            this.salesAnalyticsButton.TabIndex = 8;
-            this.salesAnalyticsButton.Text = "Sales Analytics";
-            this.salesAnalyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.salesAnalyticsButton.UseVisualStyleBackColor = true;
-            this.salesAnalyticsButton.Click += new System.EventHandler(this.salesAnalyticsButton_Click);
             // 
             // analyticsButton
             // 
@@ -210,26 +159,6 @@
             this.saleButton.UseVisualStyleBackColor = true;
             this.saleButton.Click += new System.EventHandler(this.saleButton_Click);
             // 
-            // homeButton
-            // 
-            this.homeButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.homeButton.FlatAppearance.BorderSize = 0;
-            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.homeButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.homeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.homeButton.IconSize = 25;
-            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homeButton.Location = new System.Drawing.Point(0, 134);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.homeButton.Size = new System.Drawing.Size(177, 50);
-            this.homeButton.TabIndex = 3;
-            this.homeButton.Text = "Home";
-            this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.homeButton.UseVisualStyleBackColor = true;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox1);
@@ -306,26 +235,6 @@
             this.profileButton.TabIndex = 0;
             this.profileButton.UseVisualStyleBackColor = true;
             // 
-            // creditPaymentButton
-            // 
-            this.creditPaymentButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.creditPaymentButton.FlatAppearance.BorderSize = 0;
-            this.creditPaymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.creditPaymentButton.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
-            this.creditPaymentButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.creditPaymentButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.creditPaymentButton.IconSize = 25;
-            this.creditPaymentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.creditPaymentButton.Location = new System.Drawing.Point(0, 474);
-            this.creditPaymentButton.Name = "creditPaymentButton";
-            this.creditPaymentButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.creditPaymentButton.Size = new System.Drawing.Size(177, 50);
-            this.creditPaymentButton.TabIndex = 9;
-            this.creditPaymentButton.Text = "Credit Payment";
-            this.creditPaymentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.creditPaymentButton.UseVisualStyleBackColor = true;
-            this.creditPaymentButton.Click += new System.EventHandler(this.creditPaymentButton_Click);
-            // 
             // managerCreditAnalyticsUserControl1
             // 
             this.managerCreditAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
@@ -398,6 +307,97 @@
             this.managerCreditPaymentUserControl1.Size = new System.Drawing.Size(690, 428);
             this.managerCreditPaymentUserControl1.TabIndex = 8;
             // 
+            // homeButton
+            // 
+            this.homeButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.homeButton.FlatAppearance.BorderSize = 0;
+            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeButton.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.homeButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.homeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.homeButton.IconSize = 25;
+            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeButton.Location = new System.Drawing.Point(0, 134);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.homeButton.Size = new System.Drawing.Size(177, 50);
+            this.homeButton.TabIndex = 3;
+            this.homeButton.Text = "Home";
+            this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
+            // salesAnalyticsButton
+            // 
+            this.salesAnalyticsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.salesAnalyticsButton.FlatAppearance.BorderSize = 0;
+            this.salesAnalyticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesAnalyticsButton.IconChar = FontAwesome.Sharp.IconChar.CartShopping;
+            this.salesAnalyticsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.salesAnalyticsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.salesAnalyticsButton.IconSize = 25;
+            this.salesAnalyticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salesAnalyticsButton.Location = new System.Drawing.Point(0, 0);
+            this.salesAnalyticsButton.Name = "salesAnalyticsButton";
+            this.salesAnalyticsButton.Padding = new System.Windows.Forms.Padding(25, 0, 10, 0);
+            this.salesAnalyticsButton.Size = new System.Drawing.Size(177, 38);
+            this.salesAnalyticsButton.TabIndex = 8;
+            this.salesAnalyticsButton.Text = "Sales Analytics";
+            this.salesAnalyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.salesAnalyticsButton.UseVisualStyleBackColor = true;
+            this.salesAnalyticsButton.Click += new System.EventHandler(this.salesAnalyticsButton_Click);
+            // 
+            // creditAnalyticsButton
+            // 
+            this.creditAnalyticsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.creditAnalyticsButton.FlatAppearance.BorderSize = 0;
+            this.creditAnalyticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.creditAnalyticsButton.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
+            this.creditAnalyticsButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.creditAnalyticsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.creditAnalyticsButton.IconSize = 25;
+            this.creditAnalyticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.creditAnalyticsButton.Location = new System.Drawing.Point(0, 38);
+            this.creditAnalyticsButton.Name = "creditAnalyticsButton";
+            this.creditAnalyticsButton.Padding = new System.Windows.Forms.Padding(25, 0, 10, 0);
+            this.creditAnalyticsButton.Size = new System.Drawing.Size(177, 38);
+            this.creditAnalyticsButton.TabIndex = 9;
+            this.creditAnalyticsButton.Text = "Credits Analytics";
+            this.creditAnalyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.creditAnalyticsButton.UseVisualStyleBackColor = true;
+            this.creditAnalyticsButton.Click += new System.EventHandler(this.creditAnalyticsButton_Click);
+            // 
+            // analyticsSubMenu
+            // 
+            this.analyticsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(199)))));
+            this.analyticsSubMenu.Controls.Add(this.creditAnalyticsButton);
+            this.analyticsSubMenu.Controls.Add(this.salesAnalyticsButton);
+            this.analyticsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.analyticsSubMenu.Location = new System.Drawing.Point(0, 384);
+            this.analyticsSubMenu.Name = "analyticsSubMenu";
+            this.analyticsSubMenu.Size = new System.Drawing.Size(177, 90);
+            this.analyticsSubMenu.TabIndex = 8;
+            // 
+            // creditPaymentButton
+            // 
+            this.creditPaymentButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.creditPaymentButton.FlatAppearance.BorderSize = 0;
+            this.creditPaymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.creditPaymentButton.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.creditPaymentButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.creditPaymentButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.creditPaymentButton.IconSize = 25;
+            this.creditPaymentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.creditPaymentButton.Location = new System.Drawing.Point(0, 474);
+            this.creditPaymentButton.Name = "creditPaymentButton";
+            this.creditPaymentButton.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.creditPaymentButton.Size = new System.Drawing.Size(177, 50);
+            this.creditPaymentButton.TabIndex = 9;
+            this.creditPaymentButton.Text = "Credit Payment";
+            this.creditPaymentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.creditPaymentButton.UseVisualStyleBackColor = true;
+            this.creditPaymentButton.Click += new System.EventHandler(this.creditPaymentButton_Click);
+            // 
             // ManagerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,11 +417,11 @@
             this.Text = "ManagerApp";
             this.Load += new System.EventHandler(this.ManagerApp_Load);
             this.sideNavBar.ResumeLayout(false);
-            this.analyticsSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.analyticsSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -430,14 +430,10 @@
 
         private System.Windows.Forms.Panel sideNavBar;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton homeButton;
         private FontAwesome.Sharp.IconButton productsButton;
         private FontAwesome.Sharp.IconButton saleButton;
         private FontAwesome.Sharp.IconButton usersButton;
         private FontAwesome.Sharp.IconButton analyticsButton;
-        private System.Windows.Forms.Panel analyticsSubMenu;
-        private FontAwesome.Sharp.IconButton creditAnalyticsButton;
-        private FontAwesome.Sharp.IconButton salesAnalyticsButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label usernameLabel;
         private FontAwesome.Sharp.IconButton profileButton;
@@ -449,7 +445,11 @@
         private Manager.ManagerUsersUserControl managerUsersUserControl1;
         private Manager.ManagerSalesAnalyticsUserControl managerSalesAnalyticsUserControl1;
         private Manager.ManagerCreditAnalyticsUserControl managerCreditAnalyticsUserControl1;
-        private FontAwesome.Sharp.IconButton creditPaymentButton;
         private Manager.ManagerCreditPaymentUserControl managerCreditPaymentUserControl1;
+        private FontAwesome.Sharp.IconButton homeButton;
+        private FontAwesome.Sharp.IconButton creditPaymentButton;
+        private System.Windows.Forms.Panel analyticsSubMenu;
+        private FontAwesome.Sharp.IconButton creditAnalyticsButton;
+        private FontAwesome.Sharp.IconButton salesAnalyticsButton;
     }
 }
