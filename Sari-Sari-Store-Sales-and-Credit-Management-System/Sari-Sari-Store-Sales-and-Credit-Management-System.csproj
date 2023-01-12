@@ -112,6 +112,8 @@
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Product.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -167,6 +169,30 @@
     <Compile Include="View\Manager\ManagerUsersUserControl.Designer.cs">
       <DependentUpon>ManagerUsersUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Manager\ProductForms\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Manager\ProductForms\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manager\ProductForms\UpdateProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Manager\ProductForms\UpdateProductForm.Designer.cs">
+      <DependentUpon>UpdateProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manager\UserForms\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Manager\UserForms\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manager\UserForms\UpdateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Manager\UserForms\UpdateUserForm.Designer.cs">
+      <DependentUpon>UpdateUserForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +202,16 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditAnalyticsUserControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditPaymentUserControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerProductsUserControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSalesAnalyticsUserControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerUsersUserControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.ManagerApp.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -205,6 +241,25 @@
     <EmbeddedResource Include="View\Manager\ManagerUsersUserControl.resx">
       <DependentUpon>ManagerUsersUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\ProductForms\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\ProductForms\UpdateProductForm.resx">
+      <DependentUpon>UpdateProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\UserForms\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\UserForms\UpdateUserForm.resx">
+      <DependentUpon>UpdateUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Sari-Sari-Store-Sales-and-Credit-Management-System.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Sari-Sari-Store-Sales-and-Credit-Management-System.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Sari-Sari-Store-Sales-and-Credit-Management-System.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Sari-Sari-Store-Sales-and-Credit-Management-System.csproj.SuggestedBindingRedirects.cache" />
+    <None Include="obj\Release\Sari-Sari-Store-Sales-and-Credit-Management-System.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -221,6 +276,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_whitebg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\Sari-Sari-Store-Sales-and-Credit-Management-System.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
