@@ -187,15 +187,6 @@
     <Compile Include="View\Manager\UserForms\UpdateUserForm.Designer.cs">
       <DependentUpon>UpdateUserForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.Login.resources" />
     <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.Properties.Resources.resources" />
     <EmbeddedResource Include="obj\Debug\Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditAnalyticsUserControl.resources" />
@@ -211,9 +202,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-	  <EmbeddedResource Include="Login.resx">
-		  <DependentUpon>Login.cs</DependentUpon>
-	  </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\ManagerApp.resx">
       <DependentUpon>ManagerApp.cs</DependentUpon>
     </EmbeddedResource>
