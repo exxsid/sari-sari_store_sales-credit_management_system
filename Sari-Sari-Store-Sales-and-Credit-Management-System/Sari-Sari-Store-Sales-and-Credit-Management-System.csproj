@@ -179,6 +179,30 @@
     <Compile Include="View\Manager\ManagerUsersUserControl.Designer.cs">
       <DependentUpon>ManagerUsersUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Manager\ProductForms\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Manager\ProductForms\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manager\ProductForms\UpdateProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Manager\ProductForms\UpdateProductForm.Designer.cs">
+      <DependentUpon>UpdateProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manager\UserForms\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Manager\UserForms\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Manager\UserForms\UpdateUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Manager\UserForms\UpdateUserForm.Designer.cs">
+      <DependentUpon>UpdateUserForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Cashier\CashierCreditPaymentTab.resx">
       <DependentUpon>CashierCreditPaymentTab.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +246,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\ManagerUsersUserControl.resx">
       <DependentUpon>ManagerUsersUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\ProductForms\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\ProductForms\UpdateProductForm.resx">
+      <DependentUpon>UpdateProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\UserForms\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\UserForms\UpdateUserForm.resx">
+      <DependentUpon>UpdateUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
