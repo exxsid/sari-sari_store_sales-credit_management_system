@@ -8,24 +8,16 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.Model
 {
     public class Product
     {
-        private int Id;
-        private string Name;
-        private int Quantity;
-        private double Price;
-        private double BoughtPrice;
 
-        public Product(
-                int Id, string Name,
-                int Quantity, double Price,
-                double BoughtPrice
-            )
-        {
-            this.Id = Id;
-            this.Name = Name;
-            this.Quantity = Quantity;
-            this.Price = Price;
-            this.BoughtPrice = BoughtPrice;
-        }
+        public int Id { get { return Id; } set { this.Id = value; } }
+
+        public string Name { get { return Name; } set { this.Name = value; } }
+
+        public int Quantity { get { return Quantity; } set { this.Quantity = value; } }
+
+        public double Price { get { return Price; } set { this.Price = value; } }
+
+        public double BoughtPrice { get { return BoughtPrice; } set { this.BoughtPrice = value; } }
 
     }
 }

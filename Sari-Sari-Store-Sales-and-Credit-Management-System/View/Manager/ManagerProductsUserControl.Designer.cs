@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productsDataGrid = new System.Windows.Forms.DataGridView();
             this.addProductButton = new System.Windows.Forms.Button();
             this.updateProductButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.searchBar = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // productsDataGrid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(620, 267);
-            this.dataGridView1.TabIndex = 0;
+            this.productsDataGrid.AllowUserToAddRows = false;
+            this.productsDataGrid.AllowUserToDeleteRows = false;
+            this.productsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productsDataGrid.Location = new System.Drawing.Point(24, 53);
+            this.productsDataGrid.MultiSelect = false;
+            this.productsDataGrid.Name = "productsDataGrid";
+            this.productsDataGrid.ReadOnly = true;
+            this.productsDataGrid.Size = new System.Drawing.Size(620, 267);
+            this.productsDataGrid.TabIndex = 0;
             // 
             // addProductButton
             // 
@@ -58,6 +59,7 @@
             this.addProductButton.TabIndex = 1;
             this.addProductButton.Text = "Add";
             this.addProductButton.UseVisualStyleBackColor = true;
+            this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
             // 
             // updateProductButton
             // 
@@ -69,6 +71,7 @@
             this.updateProductButton.TabIndex = 2;
             this.updateProductButton.Text = "Update";
             this.updateProductButton.UseVisualStyleBackColor = true;
+            this.updateProductButton.Click += new System.EventHandler(this.updateProductButton_Click);
             // 
             // deleteButton
             // 
@@ -111,10 +114,10 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.updateProductButton);
             this.Controls.Add(this.addProductButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.productsDataGrid);
             this.Name = "ManagerProductsUserControl";
             this.Size = new System.Drawing.Size(675, 403);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,7 +125,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView productsDataGrid;
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Button updateProductButton;
         private System.Windows.Forms.Button deleteButton;
