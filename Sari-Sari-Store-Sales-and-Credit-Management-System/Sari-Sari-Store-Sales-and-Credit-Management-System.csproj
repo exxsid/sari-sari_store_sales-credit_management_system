@@ -99,6 +99,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\User.cs" />
     <Compile Include="View\Cashier\CashierCreditPaymentTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
