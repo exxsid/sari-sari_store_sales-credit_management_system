@@ -170,6 +170,7 @@
             this.quantityTextbox.Name = "quantityTextbox";
             this.quantityTextbox.Size = new System.Drawing.Size(109, 20);
             this.quantityTextbox.TabIndex = 26;
+            this.quantityTextbox.TextChanged += new System.EventHandler(this.quantityTextbox_TextChanged);
             // 
             // productLabel
             // 

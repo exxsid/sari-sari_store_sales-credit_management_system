@@ -209,7 +209,7 @@
             // cashierCreditPayment1
             // 
             this.cashierCreditPayment1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.cashierCreditPayment1.Location = new System.Drawing.Point(194, 47);
+            this.cashierCreditPayment1.Location = new System.Drawing.Point(194, 48);
             this.cashierCreditPayment1.Name = "cashierCreditPayment1";
             this.cashierCreditPayment1.Size = new System.Drawing.Size(722, 478);
             this.cashierCreditPayment1.TabIndex = 6;
@@ -242,6 +242,7 @@
             this.Controls.Add(this.sideNavBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CashierDash";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierDash";
             this.Load += new System.EventHandler(this.CashierDash_Load);
             this.panel2.ResumeLayout(false);
