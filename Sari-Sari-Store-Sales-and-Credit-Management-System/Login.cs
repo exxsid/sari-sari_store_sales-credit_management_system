@@ -39,7 +39,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 
             if (!reader.HasRows)
             {
-                MessageBox.Show("Usre not found.");
+                MessageBox.Show("User not found.");
                 return;
             }
 
@@ -71,20 +71,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             connection.Close();
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void inputIDNumber_TextChanged(object sender, EventArgs e)
         {

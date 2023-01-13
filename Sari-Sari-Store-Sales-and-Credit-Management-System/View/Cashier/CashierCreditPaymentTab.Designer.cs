@@ -44,7 +44,8 @@
             // 
             this.cancelButton.BackColor = System.Drawing.Color.Red;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Location = new System.Drawing.Point(416, 303);
+            this.cancelButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.Location = new System.Drawing.Point(415, 297);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 32);
             this.cancelButton.TabIndex = 19;
@@ -54,7 +55,8 @@
             // saveButton
             // 
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Location = new System.Drawing.Point(323, 303);
+            this.saveButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(322, 297);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 32);
             this.saveButton.TabIndex = 18;
@@ -63,19 +65,21 @@
             // 
             // creditAmountTextBox
             // 
-            this.creditAmountTextBox.Location = new System.Drawing.Point(306, 189);
+            this.creditAmountTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditAmountTextBox.Location = new System.Drawing.Point(305, 183);
             this.creditAmountTextBox.Name = "creditAmountTextBox";
             this.creditAmountTextBox.ReadOnly = true;
-            this.creditAmountTextBox.Size = new System.Drawing.Size(185, 20);
+            this.creditAmountTextBox.Size = new System.Drawing.Size(185, 25);
             this.creditAmountTextBox.TabIndex = 17;
             // 
             // creditAmoutLabel
             // 
             this.creditAmoutLabel.AutoSize = true;
             this.creditAmoutLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.creditAmoutLabel.Location = new System.Drawing.Point(188, 190);
+            this.creditAmoutLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditAmoutLabel.Location = new System.Drawing.Point(187, 184);
             this.creditAmoutLabel.Name = "creditAmoutLabel";
-            this.creditAmoutLabel.Size = new System.Drawing.Size(73, 13);
+            this.creditAmoutLabel.Size = new System.Drawing.Size(102, 20);
             this.creditAmoutLabel.TabIndex = 16;
             this.creditAmoutLabel.Text = "Credit Amount";
             // 
@@ -83,55 +87,61 @@
             // 
             this.paymentLabel.AutoSize = true;
             this.paymentLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.paymentLabel.Location = new System.Drawing.Point(188, 250);
+            this.paymentLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentLabel.Location = new System.Drawing.Point(187, 244);
             this.paymentLabel.Name = "paymentLabel";
-            this.paymentLabel.Size = new System.Drawing.Size(48, 13);
+            this.paymentLabel.Size = new System.Drawing.Size(65, 20);
             this.paymentLabel.TabIndex = 15;
             this.paymentLabel.Text = "Payment";
             // 
             // paymentTextbox
             // 
-            this.paymentTextbox.Location = new System.Drawing.Point(306, 247);
+            this.paymentTextbox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentTextbox.Location = new System.Drawing.Point(305, 241);
             this.paymentTextbox.Name = "paymentTextbox";
-            this.paymentTextbox.Size = new System.Drawing.Size(185, 20);
+            this.paymentTextbox.Size = new System.Drawing.Size(185, 25);
             this.paymentTextbox.TabIndex = 14;
             // 
             // phoneCombox
             // 
+            this.phoneCombox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneCombox.FormattingEnabled = true;
-            this.phoneCombox.Location = new System.Drawing.Point(306, 128);
+            this.phoneCombox.Location = new System.Drawing.Point(305, 122);
             this.phoneCombox.Name = "phoneCombox";
-            this.phoneCombox.Size = new System.Drawing.Size(185, 21);
+            this.phoneCombox.Size = new System.Drawing.Size(185, 28);
             this.phoneCombox.TabIndex = 13;
             // 
             // nameCombox
             // 
+            this.nameCombox.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameCombox.FormattingEnabled = true;
-            this.nameCombox.Location = new System.Drawing.Point(306, 67);
+            this.nameCombox.Location = new System.Drawing.Point(305, 61);
             this.nameCombox.Name = "nameCombox";
-            this.nameCombox.Size = new System.Drawing.Size(185, 21);
+            this.nameCombox.Size = new System.Drawing.Size(185, 28);
             this.nameCombox.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(183, 130);
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(182, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Customer Phone";
             // 
             // customerNameLabel
             // 
             this.customerNameLabel.AutoSize = true;
-            this.customerNameLabel.Location = new System.Drawing.Point(187, 70);
+            this.customerNameLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerNameLabel.Location = new System.Drawing.Point(186, 64);
             this.customerNameLabel.Name = "customerNameLabel";
-            this.customerNameLabel.Size = new System.Drawing.Size(82, 13);
+            this.customerNameLabel.Size = new System.Drawing.Size(112, 20);
             this.customerNameLabel.TabIndex = 10;
             this.customerNameLabel.Text = "Customer Name";
             // 
-            // CashierCreditPayment
+            // CashierCreditPaymentTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,7 +156,7 @@
             this.Controls.Add(this.nameCombox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerNameLabel);
-            this.Name = "CashierCreditPayment";
+            this.Name = "CashierCreditPaymentTab";
             this.Size = new System.Drawing.Size(675, 403);
             this.ResumeLayout(false);
             this.PerformLayout();

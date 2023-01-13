@@ -41,8 +41,8 @@
             this.profileButton = new FontAwesome.Sharp.IconButton();
             this.cashierCreditPayment2 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierCreditPaymentTab();
             this.cashierCreditPayment1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierCreditPaymentTab();
-            this.cashierSaleTab1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierSaleTab();
             this.cashierHomeTab1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierHomeTab();
+            this.cashierSaleTab1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sideNavBar.SuspendLayout();
@@ -86,6 +86,7 @@
             this.homeButton.Text = "Home";
             this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // saleButton
             // 
@@ -105,6 +106,7 @@
             this.saleButton.Text = "Sale";
             this.saleButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.saleButton.UseVisualStyleBackColor = true;
+            this.saleButton.Click += new System.EventHandler(this.saleButton_Click_1);
             // 
             // sideNavBar
             // 
@@ -119,7 +121,7 @@
             this.sideNavBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             this.sideNavBar.Location = new System.Drawing.Point(0, 0);
             this.sideNavBar.Name = "sideNavBar";
-            this.sideNavBar.Size = new System.Drawing.Size(194, 515);
+            this.sideNavBar.Size = new System.Drawing.Size(194, 476);
             this.sideNavBar.TabIndex = 2;
             // 
             // creditPaymentButton
@@ -140,6 +142,7 @@
             this.creditPaymentButton.Text = "Credit Payment";
             this.creditPaymentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.creditPaymentButton.UseVisualStyleBackColor = true;
+            this.creditPaymentButton.Click += new System.EventHandler(this.creditPaymentButton_Click_1);
             // 
             // panel1
             // 
@@ -150,7 +153,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(194, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(706, 48);
+            this.panel1.Size = new System.Drawing.Size(690, 48);
             this.panel1.TabIndex = 3;
             // 
             // logoutButton
@@ -165,7 +168,7 @@
             this.logoutButton.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.logoutButton.IconSize = 25;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.logoutButton.Location = new System.Drawing.Point(570, 8);
+            this.logoutButton.Location = new System.Drawing.Point(554, 8);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(108, 33);
             this.logoutButton.TabIndex = 2;
@@ -214,14 +217,6 @@
             this.cashierCreditPayment1.Size = new System.Drawing.Size(722, 478);
             this.cashierCreditPayment1.TabIndex = 6;
             // 
-            // cashierSaleTab1
-            // 
-            this.cashierSaleTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.cashierSaleTab1.Location = new System.Drawing.Point(194, 47);
-            this.cashierSaleTab1.Name = "cashierSaleTab1";
-            this.cashierSaleTab1.Size = new System.Drawing.Size(722, 478);
-            this.cashierSaleTab1.TabIndex = 5;
-            // 
             // cashierHomeTab1
             // 
             this.cashierHomeTab1.Location = new System.Drawing.Point(194, 48);
@@ -229,17 +224,27 @@
             this.cashierHomeTab1.Size = new System.Drawing.Size(722, 477);
             this.cashierHomeTab1.TabIndex = 4;
             // 
+            // cashierSaleTab1
+            // 
+            this.cashierSaleTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.cashierSaleTab1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cashierSaleTab1.Location = new System.Drawing.Point(194, 48);
+            this.cashierSaleTab1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cashierSaleTab1.Name = "cashierSaleTab1";
+            this.cashierSaleTab1.Size = new System.Drawing.Size(711, 438);
+            this.cashierSaleTab1.TabIndex = 8;
+            // 
             // CashierDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 515);
+            this.ClientSize = new System.Drawing.Size(884, 476);
             this.Controls.Add(this.cashierCreditPayment2);
-            this.Controls.Add(this.cashierCreditPayment1);
-            this.Controls.Add(this.cashierSaleTab1);
             this.Controls.Add(this.cashierHomeTab1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sideNavBar);
+            this.Controls.Add(this.cashierSaleTab1);
+            this.Controls.Add(this.cashierCreditPayment1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CashierDash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -267,8 +272,8 @@
         private System.Windows.Forms.Label usernameLabel;
         private FontAwesome.Sharp.IconButton profileButton;
         private View.Cashier.CashierHomeTab cashierHomeTab1;
-        private View.Cashier.CashierSaleTab cashierSaleTab1;
         private View.Cashier.CashierCreditPaymentTab cashierCreditPayment1;
         private View.Cashier.CashierCreditPaymentTab cashierCreditPayment2;
+        private View.Manager.ManagerSaleUserControl cashierSaleTab1;
     }
 }
