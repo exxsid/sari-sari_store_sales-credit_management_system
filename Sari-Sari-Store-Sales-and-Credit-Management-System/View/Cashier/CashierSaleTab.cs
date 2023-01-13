@@ -16,5 +16,10 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier
         {
             InitializeComponent();
         }
+
+        private void quantityTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,6 +22,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
         private void CashierDash_Load(object sender, EventArgs e)
         {
             usernameLabel.Text = cashier;
+            this.cashierHomeTab1.Show();
+            this.cashierHomeTab1.BringToFront();
         }
     }
 }

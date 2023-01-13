@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.inputPassword = new System.Windows.Forms.TextBox();
-            this.forgotPass = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,6 +50,7 @@
             this.inputIDNumber.Name = "inputIDNumber";
             this.inputIDNumber.Size = new System.Drawing.Size(258, 26);
             this.inputIDNumber.TabIndex = 3;
+            this.inputIDNumber.TextChanged += new System.EventHandler(this.inputIDNumber_TextChanged);
             // 
             // label2
             // 
@@ -88,19 +88,6 @@
             this.inputPassword.TabIndex = 5;
             this.inputPassword.UseSystemPasswordChar = true;
             // 
-            // forgotPass
-            // 
-            this.forgotPass.AutoSize = true;
-            this.forgotPass.BackColor = System.Drawing.Color.Transparent;
-            this.forgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.forgotPass.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotPass.ForeColor = System.Drawing.Color.White;
-            this.forgotPass.Location = new System.Drawing.Point(655, 276);
-            this.forgotPass.Name = "forgotPass";
-            this.forgotPass.Size = new System.Drawing.Size(105, 15);
-            this.forgotPass.TabIndex = 7;
-            this.forgotPass.Text = "Forgot Password?";
-            // 
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.Color.SteelBlue;
@@ -133,7 +120,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(170, 188);
             this.pictureBox1.TabIndex = 11;
@@ -161,7 +148,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.forgotPass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.inputPassword);
             this.Controls.Add(this.label2);
@@ -184,7 +170,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox inputPassword;
-        private System.Windows.Forms.Label forgotPass;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;

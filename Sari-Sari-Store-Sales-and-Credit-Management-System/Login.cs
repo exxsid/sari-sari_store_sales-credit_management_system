@@ -14,7 +14,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 {
     public partial class Login : Form
     {
-        string connect = "server=localhost;port=3306;user=root;password='';database=minimart";
+        string connect = "server=localhost;port=3306;user=root;password='';database=sari-sari_store";
 
         public Login()
         {
@@ -29,7 +29,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             MySqlConnection connection = new MySqlConnection(connect);
             connection.Open();
 
-            string query = "SELECT * FROM accounts WHERE IDNumber = @IDNumber AND password = @Password";
+            string query = "SELECT * FROM user WHERE id = @IDNumber AND password = @Password";
             
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@IDNumber", IDNumber);
@@ -37,19 +37,25 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 
             MySqlDataReader reader = command.ExecuteReader();
 
+            if (!reader.HasRows)
+            {
+                MessageBox.Show("Usre not found.");
+                return;
+            }
+
             while (reader.Read()) {
 
-                string accountType = reader["AccountType"].ToString();
-                string name = reader["Name"].ToString();
+                string accountType = reader["user_type"].ToString();
+                string name = reader["name"].ToString();
 
-                if (accountType == "Manager")
+                if (accountType == "M")
                 {
                     View.ManagerApp next = new View.ManagerApp(name);
                     next.Show();
                     this.Hide();
 
                 }
-                else if (accountType == "Cashier")
+                else if (accountType == "C")
                 {
                     CashierDash next = new CashierDash(name);
                     next.Show();
@@ -57,7 +63,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("Error logging in!");
+                    
                 }
 
             } 
@@ -76,6 +82,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void inputIDNumber_TextChanged(object sender, EventArgs e)
         {
 
         }
