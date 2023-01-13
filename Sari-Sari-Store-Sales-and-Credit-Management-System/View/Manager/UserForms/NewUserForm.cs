@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.UserForms
 {
-    public partial class AddUserForm : Form
+    public partial class NewUserForm : Form
     {
-        public AddUserForm()
+        public NewUserForm()
         {
             InitializeComponent();
         }

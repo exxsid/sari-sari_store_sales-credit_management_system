@@ -1,6 +1,6 @@
 ﻿namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.UserForms
 {
-    partial class AddUserForm
+    partial class NewUserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
             // 
-            // AddUserForm
+            // NewUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,9 +128,10 @@
             this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.nameLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "AddUserForm";
+            this.Name = "NewUserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add User Form";
             this.ResumeLayout(false);
             this.PerformLayout();

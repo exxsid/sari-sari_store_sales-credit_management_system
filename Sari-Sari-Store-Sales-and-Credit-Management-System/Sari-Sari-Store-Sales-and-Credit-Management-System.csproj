@@ -192,11 +192,11 @@
     <Compile Include="View\Manager\ProductForms\UpdateProductForm.Designer.cs">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Manager\UserForms\AddUserForm.cs">
+    <Compile Include="View\Manager\UserForms\NewUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Manager\UserForms\AddUserForm.Designer.cs">
-      <DependentUpon>AddUserForm.cs</DependentUpon>
+    <Compile Include="View\Manager\UserForms\NewUserForm.Designer.cs">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Manager\UserForms\UpdateUserForm.cs">
       <SubType>Form</SubType>
@@ -254,8 +254,8 @@
     <EmbeddedResource Include="View\Manager\ProductForms\UpdateProductForm.resx">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Manager\UserForms\AddUserForm.resx">
-      <DependentUpon>AddUserForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\Manager\UserForms\NewUserForm.resx">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\UserForms\UpdateUserForm.resx">
       <DependentUpon>UpdateUserForm.cs</DependentUpon>

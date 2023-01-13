@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.addUserButton = new System.Windows.Forms.Button();
+            this.usersDataGridView = new System.Windows.Forms.DataGridView();
+            this.newUserButton = new System.Windows.Forms.Button();
             this.updateUserButton = new System.Windows.Forms.Button();
             this.deleteUserButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchBar = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // usersDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(620, 271);
-            this.dataGridView1.TabIndex = 0;
+            this.usersDataGridView.AllowUserToAddRows = false;
+            this.usersDataGridView.AllowUserToDeleteRows = false;
+            this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usersDataGridView.Location = new System.Drawing.Point(24, 56);
+            this.usersDataGridView.MultiSelect = false;
+            this.usersDataGridView.Name = "usersDataGridView";
+            this.usersDataGridView.ReadOnly = true;
+            this.usersDataGridView.Size = new System.Drawing.Size(620, 271);
+            this.usersDataGridView.TabIndex = 0;
             // 
-            // addUserButton
+            // newUserButton
             // 
-            this.addUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addUserButton.Location = new System.Drawing.Point(24, 345);
-            this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(87, 32);
-            this.addUserButton.TabIndex = 1;
-            this.addUserButton.Text = "Add";
-            this.addUserButton.UseVisualStyleBackColor = true;
+            this.newUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newUserButton.Location = new System.Drawing.Point(24, 345);
+            this.newUserButton.Name = "newUserButton";
+            this.newUserButton.Size = new System.Drawing.Size(87, 32);
+            this.newUserButton.TabIndex = 1;
+            this.newUserButton.Text = "New";
+            this.newUserButton.UseVisualStyleBackColor = true;
+            this.newUserButton.Click += new System.EventHandler(this.newUserButton_Click);
             // 
             // updateUserButton
             // 
@@ -67,6 +69,7 @@
             this.updateUserButton.TabIndex = 2;
             this.updateUserButton.Text = "Update";
             this.updateUserButton.UseVisualStyleBackColor = true;
+            this.updateUserButton.Click += new System.EventHandler(this.updateUserButton_Click);
             // 
             // deleteUserButton
             // 
@@ -78,6 +81,7 @@
             this.deleteUserButton.TabIndex = 3;
             this.deleteUserButton.Text = "Delete";
             this.deleteUserButton.UseVisualStyleBackColor = false;
+            this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
             // 
             // searchButton
             // 
@@ -107,13 +111,13 @@
             this.Controls.Add(this.searchBar);
             this.Controls.Add(this.deleteUserButton);
             this.Controls.Add(this.updateUserButton);
-            this.Controls.Add(this.addUserButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.newUserButton);
+            this.Controls.Add(this.usersDataGridView);
             this.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerUsersUserControl";
             this.Size = new System.Drawing.Size(675, 403);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,8 +125,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button addUserButton;
+        private System.Windows.Forms.DataGridView usersDataGridView;
+        private System.Windows.Forms.Button newUserButton;
         private System.Windows.Forms.Button updateUserButton;
         private System.Windows.Forms.Button deleteUserButton;
         private System.Windows.Forms.Button searchButton;
