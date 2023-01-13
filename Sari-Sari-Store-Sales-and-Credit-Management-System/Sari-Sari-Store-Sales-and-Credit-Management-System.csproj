@@ -179,11 +179,11 @@
     <Compile Include="View\Manager\ManagerUsersUserControl.Designer.cs">
       <DependentUpon>ManagerUsersUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Manager\ProductForms\AddProductForm.cs">
+    <Compile Include="View\Manager\ProductForms\NewProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Manager\ProductForms\AddProductForm.Designer.cs">
-      <DependentUpon>AddProductForm.cs</DependentUpon>
+    <Compile Include="View\Manager\ProductForms\NewProductForm.Designer.cs">
+      <DependentUpon>NewProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Manager\ProductForms\UpdateProductForm.cs">
       <SubType>Form</SubType>
@@ -247,8 +247,8 @@
     <EmbeddedResource Include="View\Manager\ManagerUsersUserControl.resx">
       <DependentUpon>ManagerUsersUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Manager\ProductForms\AddProductForm.resx">
-      <DependentUpon>AddProductForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\Manager\ProductForms\NewProductForm.resx">
+      <DependentUpon>NewProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Manager\ProductForms\UpdateProductForm.resx">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>

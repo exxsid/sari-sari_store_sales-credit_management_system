@@ -24,7 +24,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
         private void addProductButton_Click(object sender, EventArgs e)
         {
-            AddProductForm addProd = new AddProductForm();
+            NewProductForm addProd = new NewProductForm();
             addProd.Show();
 
             //TODO: refresh the datagrid
