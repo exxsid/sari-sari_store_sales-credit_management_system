@@ -196,8 +196,13 @@
             // 
             // productCombobox
             // 
+            this.productCombobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.productCombobox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productCombobox.FormattingEnabled = true;
+            this.productCombobox.Items.AddRange(new object[] {
+            "mark",
+            "eugene",
+            "laysa"});
             this.productCombobox.Location = new System.Drawing.Point(76, 122);
             this.productCombobox.Name = "productCombobox";
             this.productCombobox.Size = new System.Drawing.Size(250, 29);

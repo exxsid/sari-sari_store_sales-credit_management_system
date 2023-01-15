@@ -61,10 +61,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
                     next.Show();
                     this.Hide();
                 }
-                else
-                {
-                    
-                }
 
             } 
 

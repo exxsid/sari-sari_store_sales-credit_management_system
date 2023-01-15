@@ -40,9 +40,9 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.profileButton = new FontAwesome.Sharp.IconButton();
             this.cashierCreditPayment2 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierCreditPaymentTab();
-            this.cashierCreditPayment1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierCreditPaymentTab();
             this.cashierHomeTab1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierHomeTab();
             this.cashierSaleTab1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
+            this.cashierCreditPayment1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierCreditPaymentTab();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sideNavBar.SuspendLayout();
@@ -209,14 +209,6 @@
             this.cashierCreditPayment2.Size = new System.Drawing.Size(69, 8);
             this.cashierCreditPayment2.TabIndex = 7;
             // 
-            // cashierCreditPayment1
-            // 
-            this.cashierCreditPayment1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.cashierCreditPayment1.Location = new System.Drawing.Point(194, 48);
-            this.cashierCreditPayment1.Name = "cashierCreditPayment1";
-            this.cashierCreditPayment1.Size = new System.Drawing.Size(722, 478);
-            this.cashierCreditPayment1.TabIndex = 6;
-            // 
             // cashierHomeTab1
             // 
             this.cashierHomeTab1.Location = new System.Drawing.Point(194, 48);
@@ -233,6 +225,14 @@
             this.cashierSaleTab1.Name = "cashierSaleTab1";
             this.cashierSaleTab1.Size = new System.Drawing.Size(711, 438);
             this.cashierSaleTab1.TabIndex = 8;
+            // 
+            // cashierCreditPayment1
+            // 
+            this.cashierCreditPayment1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.cashierCreditPayment1.Location = new System.Drawing.Point(194, 48);
+            this.cashierCreditPayment1.Name = "cashierCreditPayment1";
+            this.cashierCreditPayment1.Size = new System.Drawing.Size(722, 478);
+            this.cashierCreditPayment1.TabIndex = 6;
             // 
             // CashierDash
             // 

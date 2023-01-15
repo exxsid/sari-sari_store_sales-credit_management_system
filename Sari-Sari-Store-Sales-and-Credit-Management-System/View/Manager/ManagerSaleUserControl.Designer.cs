@@ -84,7 +84,13 @@
             // 
             // productCombobox
             // 
+            this.productCombobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.productCombobox.FormattingEnabled = true;
+            this.productCombobox.Items.AddRange(new object[] {
+            "reyerye",
+            "eryeye",
+            "",
+            "eryrey"});
             this.productCombobox.Location = new System.Drawing.Point(35, 129);
             this.productCombobox.Name = "productCombobox";
             this.productCombobox.Size = new System.Drawing.Size(250, 29);
