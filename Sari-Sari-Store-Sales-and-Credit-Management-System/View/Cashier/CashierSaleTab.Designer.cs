@@ -53,7 +53,7 @@
             // paymentTextbox
             // 
             this.paymentTextbox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentTextbox.Location = new System.Drawing.Point(492, 18);
+            this.paymentTextbox.Location = new System.Drawing.Point(450, 18);
             this.paymentTextbox.Name = "paymentTextbox";
             this.paymentTextbox.Size = new System.Drawing.Size(201, 26);
             this.paymentTextbox.TabIndex = 38;
@@ -62,7 +62,7 @@
             // 
             this.paymentLabel.AutoSize = true;
             this.paymentLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentLabel.Location = new System.Drawing.Point(414, 21);
+            this.paymentLabel.Location = new System.Drawing.Point(372, 21);
             this.paymentLabel.Name = "paymentLabel";
             this.paymentLabel.Size = new System.Drawing.Size(72, 21);
             this.paymentLabel.TabIndex = 37;
@@ -73,7 +73,7 @@
             this.button1.BackColor = System.Drawing.Color.YellowGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(513, 355);
+            this.button1.Location = new System.Drawing.Point(471, 355);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 29);
             this.button1.TabIndex = 36;
@@ -85,7 +85,7 @@
             this.cancelButton.BackColor = System.Drawing.Color.Red;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.Location = new System.Drawing.Point(606, 355);
+            this.cancelButton.Location = new System.Drawing.Point(564, 355);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(87, 29);
             this.cancelButton.TabIndex = 35;
@@ -96,7 +96,7 @@
             // 
             this.removeProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeProductButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeProductButton.Location = new System.Drawing.Point(579, 279);
+            this.removeProductButton.Location = new System.Drawing.Point(537, 279);
             this.removeProductButton.Name = "removeProductButton";
             this.removeProductButton.Size = new System.Drawing.Size(114, 29);
             this.removeProductButton.TabIndex = 34;
@@ -107,18 +107,19 @@
             // 
             this.addProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProductButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProductButton.Location = new System.Drawing.Point(579, 122);
+            this.addProductButton.Location = new System.Drawing.Point(537, 122);
             this.addProductButton.Name = "addProductButton";
             this.addProductButton.Size = new System.Drawing.Size(114, 29);
             this.addProductButton.TabIndex = 33;
             this.addProductButton.Text = "Add";
             this.addProductButton.UseVisualStyleBackColor = true;
+            this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
             // 
             // totalPriceLabel
             // 
             this.totalPriceLabel.AutoSize = true;
             this.totalPriceLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLabel.Location = new System.Drawing.Point(365, 317);
+            this.totalPriceLabel.Location = new System.Drawing.Point(323, 317);
             this.totalPriceLabel.Name = "totalPriceLabel";
             this.totalPriceLabel.Size = new System.Drawing.Size(82, 21);
             this.totalPriceLabel.TabIndex = 32;
@@ -128,18 +129,19 @@
             // 
             this.totalPriceTextbox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.totalPriceTextbox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceTextbox.Location = new System.Drawing.Point(447, 314);
+            this.totalPriceTextbox.Location = new System.Drawing.Point(405, 314);
             this.totalPriceTextbox.Name = "totalPriceTextbox";
             this.totalPriceTextbox.ReadOnly = true;
             this.totalPriceTextbox.Size = new System.Drawing.Size(109, 26);
             this.totalPriceTextbox.TabIndex = 31;
+            this.totalPriceTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 158);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 158);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(480, 150);
@@ -149,7 +151,7 @@
             // 
             this.unitPriceLabel.AutoSize = true;
             this.unitPriceLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unitPriceLabel.Location = new System.Drawing.Point(467, 101);
+            this.unitPriceLabel.Location = new System.Drawing.Point(425, 101);
             this.unitPriceLabel.Name = "unitPriceLabel";
             this.unitPriceLabel.Size = new System.Drawing.Size(76, 21);
             this.unitPriceLabel.TabIndex = 29;
@@ -159,17 +161,19 @@
             // 
             this.unitPriceTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.unitPriceTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unitPriceTextBox.Location = new System.Drawing.Point(447, 125);
+            this.unitPriceTextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.unitPriceTextBox.Location = new System.Drawing.Point(405, 125);
             this.unitPriceTextBox.Name = "unitPriceTextBox";
             this.unitPriceTextBox.ReadOnly = true;
             this.unitPriceTextBox.Size = new System.Drawing.Size(109, 26);
             this.unitPriceTextBox.TabIndex = 28;
+            this.unitPriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // quantityLabel
             // 
             this.quantityLabel.AutoSize = true;
             this.quantityLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityLabel.Location = new System.Drawing.Point(352, 101);
+            this.quantityLabel.Location = new System.Drawing.Point(310, 101);
             this.quantityLabel.Name = "quantityLabel";
             this.quantityLabel.Size = new System.Drawing.Size(68, 21);
             this.quantityLabel.TabIndex = 27;
@@ -178,17 +182,18 @@
             // quantityTextbox
             // 
             this.quantityTextbox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityTextbox.Location = new System.Drawing.Point(332, 125);
+            this.quantityTextbox.Location = new System.Drawing.Point(290, 125);
             this.quantityTextbox.Name = "quantityTextbox";
             this.quantityTextbox.Size = new System.Drawing.Size(109, 26);
             this.quantityTextbox.TabIndex = 26;
-            this.quantityTextbox.TextChanged += new System.EventHandler(this.quantityTextbox_TextChanged);
+            this.quantityTextbox.Text = "1";
+            this.quantityTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // productLabel
             // 
             this.productLabel.AutoSize = true;
             this.productLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productLabel.Location = new System.Drawing.Point(170, 98);
+            this.productLabel.Location = new System.Drawing.Point(128, 98);
             this.productLabel.Name = "productLabel";
             this.productLabel.Size = new System.Drawing.Size(63, 21);
             this.productLabel.TabIndex = 25;
@@ -203,15 +208,16 @@
             "mark",
             "eugene",
             "laysa"});
-            this.productCombobox.Location = new System.Drawing.Point(76, 122);
+            this.productCombobox.Location = new System.Drawing.Point(34, 122);
             this.productCombobox.Name = "productCombobox";
             this.productCombobox.Size = new System.Drawing.Size(250, 29);
             this.productCombobox.TabIndex = 24;
+            this.productCombobox.SelectedIndexChanged += new System.EventHandler(this.productCombobox_SelectedIndexChanged);
             // 
             // custPhoneTextBox
             // 
             this.custPhoneTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custPhoneTextBox.Location = new System.Drawing.Point(198, 62);
+            this.custPhoneTextBox.Location = new System.Drawing.Point(156, 62);
             this.custPhoneTextBox.Name = "custPhoneTextBox";
             this.custPhoneTextBox.Size = new System.Drawing.Size(201, 26);
             this.custPhoneTextBox.TabIndex = 23;
@@ -219,7 +225,7 @@
             // custNameTextBox
             // 
             this.custNameTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custNameTextBox.Location = new System.Drawing.Point(198, 18);
+            this.custNameTextBox.Location = new System.Drawing.Point(156, 18);
             this.custNameTextBox.Name = "custNameTextBox";
             this.custNameTextBox.Size = new System.Drawing.Size(201, 26);
             this.custNameTextBox.TabIndex = 22;
@@ -228,7 +234,7 @@
             // 
             this.customerPhoneLabel.AutoSize = true;
             this.customerPhoneLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerPhoneLabel.Location = new System.Drawing.Point(72, 65);
+            this.customerPhoneLabel.Location = new System.Drawing.Point(30, 65);
             this.customerPhoneLabel.Name = "customerPhoneLabel";
             this.customerPhoneLabel.Size = new System.Drawing.Size(123, 21);
             this.customerPhoneLabel.TabIndex = 21;
@@ -238,7 +244,7 @@
             // 
             this.customerNameLabel.AutoSize = true;
             this.customerNameLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerNameLabel.Location = new System.Drawing.Point(72, 21);
+            this.customerNameLabel.Location = new System.Drawing.Point(30, 21);
             this.customerNameLabel.Name = "customerNameLabel";
             this.customerNameLabel.Size = new System.Drawing.Size(120, 21);
             this.customerNameLabel.TabIndex = 20;
@@ -269,7 +275,8 @@
             this.Controls.Add(this.customerPhoneLabel);
             this.Controls.Add(this.customerNameLabel);
             this.Name = "CashierSaleTab";
-            this.Size = new System.Drawing.Size(765, 403);
+            this.Size = new System.Drawing.Size(675, 403);
+            this.Load += new System.EventHandler(this.CashierSaleTab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

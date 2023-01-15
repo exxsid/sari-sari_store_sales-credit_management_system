@@ -331,10 +331,10 @@
             this.managerCreditPaymentUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             this.managerCreditPaymentUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.managerCreditPaymentUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerCreditPaymentUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerCreditPaymentUserControl1.Location = new System.Drawing.Point(0, 0);
             this.managerCreditPaymentUserControl1.Margin = new System.Windows.Forms.Padding(4);
             this.managerCreditPaymentUserControl1.Name = "managerCreditPaymentUserControl1";
-            this.managerCreditPaymentUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerCreditPaymentUserControl1.Size = new System.Drawing.Size(884, 476);
             this.managerCreditPaymentUserControl1.TabIndex = 8;
             // 
             // managerCreditAnalyticsUserControl1
@@ -342,10 +342,10 @@
             this.managerCreditAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             this.managerCreditAnalyticsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.managerCreditAnalyticsUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerCreditAnalyticsUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerCreditAnalyticsUserControl1.Location = new System.Drawing.Point(0, 0);
             this.managerCreditAnalyticsUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.managerCreditAnalyticsUserControl1.Name = "managerCreditAnalyticsUserControl1";
-            this.managerCreditAnalyticsUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerCreditAnalyticsUserControl1.Size = new System.Drawing.Size(884, 476);
             this.managerCreditAnalyticsUserControl1.TabIndex = 7;
             // 
             // managerSalesAnalyticsUserControl1
@@ -353,10 +353,10 @@
             this.managerSalesAnalyticsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             this.managerSalesAnalyticsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.managerSalesAnalyticsUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerSalesAnalyticsUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerSalesAnalyticsUserControl1.Location = new System.Drawing.Point(0, 0);
             this.managerSalesAnalyticsUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.managerSalesAnalyticsUserControl1.Name = "managerSalesAnalyticsUserControl1";
-            this.managerSalesAnalyticsUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerSalesAnalyticsUserControl1.Size = new System.Drawing.Size(884, 476);
             this.managerSalesAnalyticsUserControl1.TabIndex = 6;
             // 
             // managerUsersUserControl1
@@ -364,19 +364,19 @@
             this.managerUsersUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             this.managerUsersUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.managerUsersUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerUsersUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerUsersUserControl1.Location = new System.Drawing.Point(0, 0);
             this.managerUsersUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.managerUsersUserControl1.Name = "managerUsersUserControl1";
-            this.managerUsersUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerUsersUserControl1.Size = new System.Drawing.Size(884, 476);
             this.managerUsersUserControl1.TabIndex = 5;
             // 
             // managerProductsUserControl1
             // 
             this.managerProductsUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             this.managerProductsUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.managerProductsUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerProductsUserControl1.Location = new System.Drawing.Point(0, 0);
             this.managerProductsUserControl1.Name = "managerProductsUserControl1";
-            this.managerProductsUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerProductsUserControl1.Size = new System.Drawing.Size(884, 476);
             this.managerProductsUserControl1.TabIndex = 4;
             // 
             // managerSaleUserControl1
@@ -403,15 +403,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 476);
+            this.Controls.Add(this.managerSaleUserControl1);
+            this.Controls.Add(this.managerHomeUserControl1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.sideNavBar);
             this.Controls.Add(this.managerCreditPaymentUserControl1);
             this.Controls.Add(this.managerCreditAnalyticsUserControl1);
             this.Controls.Add(this.managerSalesAnalyticsUserControl1);
             this.Controls.Add(this.managerUsersUserControl1);
             this.Controls.Add(this.managerProductsUserControl1);
-            this.Controls.Add(this.managerSaleUserControl1);
-            this.Controls.Add(this.managerHomeUserControl1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.sideNavBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ManagerApp";
             this.Text = "ManagerApp";
