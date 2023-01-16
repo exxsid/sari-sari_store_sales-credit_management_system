@@ -67,7 +67,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.Produc
 
             string purchaseQuery = "INSERT INTO products (name, retail_price, quantity) " +
                 "VALUE (@product_id, @wholePrice, @quantity);";
-            var purchaseCmd = new MySqlCommand(query, connection);
+            var purchaseCmd = new MySqlCommand(purchaseQuery, connection);
             purchaseCmd.Parameters.AddWithValue("@name", prodId);
             purchaseCmd.Parameters.AddWithValue("@retPrice", this.wholesalePriceLabel.Text.Trim());
             purchaseCmd.Parameters.AddWithValue("@quantity", this.quantityTextbox.Text.Trim());
