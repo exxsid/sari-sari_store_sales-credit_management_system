@@ -32,7 +32,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             NewProductForm addProd = new NewProductForm();
             addProd.Show();
 
-            //TODO: refresh the datagrid
+            
             
         }
 

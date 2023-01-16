@@ -35,7 +35,7 @@
             this.priceTextbox = new System.Windows.Forms.TextBox();
             this.priceLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.boughtPriceLabel = new System.Windows.Forms.Label();
+            this.wholesalePriceLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -84,9 +84,9 @@
             this.priceLabel.AutoSize = true;
             this.priceLabel.Location = new System.Drawing.Point(98, 164);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(38, 16);
+            this.priceLabel.Size = new System.Drawing.Size(76, 16);
             this.priceLabel.TabIndex = 4;
-            this.priceLabel.Text = "Price";
+            this.priceLabel.Text = "Retail Price";
             // 
             // textBox1
             // 
@@ -95,14 +95,14 @@
             this.textBox1.Size = new System.Drawing.Size(294, 22);
             this.textBox1.TabIndex = 7;
             // 
-            // boughtPriceLabel
+            // wholesalePriceLabel
             // 
-            this.boughtPriceLabel.AutoSize = true;
-            this.boughtPriceLabel.Location = new System.Drawing.Point(98, 234);
-            this.boughtPriceLabel.Name = "boughtPriceLabel";
-            this.boughtPriceLabel.Size = new System.Drawing.Size(83, 16);
-            this.boughtPriceLabel.TabIndex = 6;
-            this.boughtPriceLabel.Text = "Bought Price";
+            this.wholesalePriceLabel.AutoSize = true;
+            this.wholesalePriceLabel.Location = new System.Drawing.Point(98, 234);
+            this.wholesalePriceLabel.Name = "wholesalePriceLabel";
+            this.wholesalePriceLabel.Size = new System.Drawing.Size(106, 16);
+            this.wholesalePriceLabel.TabIndex = 6;
+            this.wholesalePriceLabel.Text = "Wholesale Price";
             // 
             // cancelButton
             // 
@@ -128,7 +128,7 @@
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // AddProductForm
+            // NewProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,7 +136,7 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.boughtPriceLabel);
+            this.Controls.Add(this.wholesalePriceLabel);
             this.Controls.Add(this.priceTextbox);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.quantityTextbox);
@@ -146,7 +146,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "AddProductForm";
+            this.Name = "NewProductForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Product Form";
             this.ResumeLayout(false);
@@ -163,7 +163,7 @@
         private System.Windows.Forms.TextBox priceTextbox;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label boughtPriceLabel;
+        private System.Windows.Forms.Label wholesalePriceLabel;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button saveButton;
     }
