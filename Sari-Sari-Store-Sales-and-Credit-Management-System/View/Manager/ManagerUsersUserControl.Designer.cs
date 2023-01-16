@@ -32,8 +32,6 @@
             this.newUserButton = new System.Windows.Forms.Button();
             this.updateUserButton = new System.Windows.Forms.Button();
             this.deleteUserButton = new System.Windows.Forms.Button();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.searchBar = new System.Windows.Forms.TextBox();
             this.refreshButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -86,25 +84,6 @@
             this.deleteUserButton.UseVisualStyleBackColor = false;
             this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
             // 
-            // searchButton
-            // 
-            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.Location = new System.Drawing.Point(479, 14);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 30);
-            this.searchButton.TabIndex = 7;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
-            // 
-            // searchBar
-            // 
-            this.searchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBar.Location = new System.Drawing.Point(24, 16);
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(449, 24);
-            this.searchBar.TabIndex = 6;
-            // 
             // refreshButton
             // 
             this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -123,8 +102,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             this.Controls.Add(this.refreshButton);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.searchBar);
             this.Controls.Add(this.deleteUserButton);
             this.Controls.Add(this.updateUserButton);
             this.Controls.Add(this.newUserButton);
@@ -136,7 +113,6 @@
             this.Load += new System.EventHandler(this.ManagerUsersUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -146,8 +122,6 @@
         private System.Windows.Forms.Button newUserButton;
         private System.Windows.Forms.Button updateUserButton;
         private System.Windows.Forms.Button deleteUserButton;
-        private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.Button refreshButton;
     }
 }

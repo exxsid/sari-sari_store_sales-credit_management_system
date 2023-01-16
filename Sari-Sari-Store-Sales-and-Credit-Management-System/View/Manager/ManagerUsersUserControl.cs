@@ -82,7 +82,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
         private void deleteUserButton_Click(object sender, EventArgs e)
         {
             // message box employee deletion
-            DialogResult cancelConfirmation = MessageBox.Show("Are you sure you want to exit?",
+            DialogResult cancelConfirmation = MessageBox.Show("Are you sure you want to delete the employee?",
                                    "Confirmation", MessageBoxButtons.OKCancel);
             // when the user click cancel
             // the new user form will not close
