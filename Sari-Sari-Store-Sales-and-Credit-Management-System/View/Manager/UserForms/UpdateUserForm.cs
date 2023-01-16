@@ -27,6 +27,15 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.UserFo
 
         private void cancelButton_Click(object sender, System.EventArgs e)
         {
+            DialogResult cancelConfirmation = MessageBox.Show("Are you sure you want to exit?",
+                                   "Confirmation", MessageBoxButtons.OKCancel);
+            // when the user click cancel
+            // the new user form will not close
+            if (cancelConfirmation == DialogResult.Cancel)
+            {
+                return;
+            }
+
             this.Close();
         }
 
