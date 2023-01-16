@@ -31,7 +31,7 @@
             this.productsDataGrid = new System.Windows.Forms.DataGridView();
             this.addProductButton = new System.Windows.Forms.Button();
             this.updateProductButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
+            this.changeStatusButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -74,17 +74,18 @@
             this.updateProductButton.UseVisualStyleBackColor = true;
             this.updateProductButton.Click += new System.EventHandler(this.updateProductButton_Click);
             // 
-            // deleteButton
+            // changeStatusButton
             // 
-            this.deleteButton.BackColor = System.Drawing.Color.Red;
-            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(569, 344);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 30);
-            this.deleteButton.TabIndex = 3;
-            this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = false;
+            this.changeStatusButton.BackColor = System.Drawing.Color.Red;
+            this.changeStatusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeStatusButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeStatusButton.Location = new System.Drawing.Point(512, 344);
+            this.changeStatusButton.Name = "changeStatusButton";
+            this.changeStatusButton.Size = new System.Drawing.Size(132, 30);
+            this.changeStatusButton.TabIndex = 3;
+            this.changeStatusButton.Text = "Change Status";
+            this.changeStatusButton.UseVisualStyleBackColor = false;
+            this.changeStatusButton.Click += new System.EventHandler(this.changeStatusButton_Click);
             // 
             // refreshButton
             // 
@@ -104,7 +105,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             this.Controls.Add(this.refreshButton);
-            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.changeStatusButton);
             this.Controls.Add(this.updateProductButton);
             this.Controls.Add(this.addProductButton);
             this.Controls.Add(this.productsDataGrid);
@@ -121,7 +122,7 @@
         private System.Windows.Forms.DataGridView productsDataGrid;
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Button updateProductButton;
-        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button changeStatusButton;
         private System.Windows.Forms.Button refreshButton;
     }
 }

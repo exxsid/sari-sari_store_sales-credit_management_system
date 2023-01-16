@@ -8,8 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sari_Sari_Store_Sales_and_Credit_Management_System.Misc;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.Model;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ProductForms;
+using MySql.Data.MySqlClient;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 {
@@ -82,6 +84,51 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             productsDataGrid.Columns[3].HeaderText = "Retail Price";
             productsDataGrid.Columns[4].HeaderText = "Wholesale Price";
             productsDataGrid.Columns[5].HeaderText = "Status";
+        }
+
+        private void changeStatusButton_Click(object sender, EventArgs e)
+        {
+            // message box changing status of the product
+            DialogResult cancelConfirmation = MessageBox.Show("Are you sure you want to change the product's status?",
+                                   "Confirmation", MessageBoxButtons.OKCancel);
+            // when the user click cancel
+            // the new user form will not close
+            if (cancelConfirmation == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            int prodIdSelected = int.Parse( productsDataGrid.SelectedRows[0].Cells[0].Value.ToString());
+            MySqlConnection conn = DBConnector.Connector();
+
+            string currStatusQuery = productsDataGrid.SelectedRows[0].Cells[5].Value.ToString();
+            
+            conn.Open();
+            string query = "UPDATE products " +
+                "SET status = @status " +
+                "WHERE id = " + prodIdSelected;
+
+            var cmd = new MySqlCommand(query, conn);
+            if (currStatusQuery == "Available")
+            {
+                cmd.Parameters.AddWithValue("@status", "Not Available");
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@status", "Available");
+            }
+
+            var result = cmd.ExecuteNonQuery();
+            if (result == -1)
+            {
+                conn.Close();
+                MessageBox.Show("Unable to update the product");
+                return;
+            }
+            conn.Close();
+
+            MessageBox.Show("Product status succesfuly Updated", "Complete",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
