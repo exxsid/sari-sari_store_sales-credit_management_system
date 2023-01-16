@@ -22,6 +22,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             InitializeComponent();
         }
 
+        private void ManagerProductsUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void addProductButton_Click(object sender, EventArgs e)
         {
             NewProductForm addProd = new NewProductForm();
@@ -40,15 +45,15 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                 // create a Produc object
                 // store values from the selected row
                 // TODO: check again the cell name
-                Product prod = new Product();
-                prod.Id = int.Parse(selectedRow.Cells["id"].Value.ToString());
-                prod.Name = selectedRow.Cells["name"].Value.ToString();
-                prod.Quantity = int.Parse(selectedRow.Cells["quantity"].Value.ToString());
-                prod.Price = double.Parse(selectedRow.Cells["price"].Value.ToString());
-                prod.BoughtPrice = double.Parse(selectedRow.Cells["price"].Value.ToString());
+                Product prod = new Product(
+                    int.Parse(selectedRow.Cells[0].Value.ToString()),
+                    selectedRow.Cells[1].Value.ToString(),
+                    int.Parse(selectedRow.Cells[2].Value.ToString()),
+                    double.Parse(selectedRow.Cells[3].Value.ToString()),
+                    double.Parse(selectedRow.Cells[4].Value.ToString())
+                    );
 
-                UpdateProductForm update = new UpdateProductForm();
-                update.Product = prod;
+                UpdateProductForm update = new UpdateProductForm(prod);
 
                 update.Show();
             }
@@ -58,6 +63,29 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            // re/load the the datagrid for products
+            ProductDAO productDao = new ProductDAO();
+
+            productsDataGrid.DataSource = productDao.GetProducts();
+            SetTableHeader();
+        }
+
+        private void SetTableHeader()
+        {
+            productsDataGrid.Columns[0].HeaderText = "ID";
+            productsDataGrid.Columns[1].HeaderText = "Name";
+            productsDataGrid.Columns[2].HeaderText = "Quantity";
+            productsDataGrid.Columns[3].HeaderText = "Retail Price";
+            productsDataGrid.Columns[4].HeaderText = "Wholesale Price";
         }
     }
 }

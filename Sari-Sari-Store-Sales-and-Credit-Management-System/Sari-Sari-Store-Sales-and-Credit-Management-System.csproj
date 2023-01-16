@@ -106,6 +106,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Misc\DBConnector.cs" />
+    <Compile Include="Model\ProductDAO.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserDAO.cs" />
     <Compile Include="View\Cashier\CashierCreditPaymentTab.cs">
