@@ -82,7 +82,35 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
         private void deleteUserButton_Click(object sender, EventArgs e)
         {
-            // TODO: message box User deletion
+            // message box employee deletion
+            DialogResult cancelConfirmation = MessageBox.Show("Are you sure you want to exit?",
+                                   "Confirmation", MessageBoxButtons.OKCancel);
+            // when the user click cancel
+            // the new user form will not close
+            if (cancelConfirmation == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            // Delete the selected employee employee
+            _connection.Open();
+
+            string query = "DELETE FROM employees WHERE id = @id;";
+            var cmd = new MySqlCommand(query, _connection);
+            cmd.Parameters.AddWithValue("@id", this.usersDataGridView.SelectedRows[0]
+                        .Cells[0]
+                        .Value);
+
+            int result = cmd.ExecuteNonQuery();
+            if (result == -1)
+            {
+                _connection.Close();
+                MessageBox.Show("Unable to delete the user");
+                return;
+            }
+            _connection.Close();
+            MessageBox.Show("Successfuly deleted the user");
+
         }
 
         private void refreshButton_Click(object sender, EventArgs e)
