@@ -56,7 +56,7 @@
             // 
             // typeCombobox
             // 
-            this.typeCombobox.Enabled = false;
+            this.typeCombobox.DisplayMember = "Cashier";
             this.typeCombobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.typeCombobox.FormattingEnabled = true;
             this.typeCombobox.Items.AddRange(new object[] {
@@ -102,6 +102,7 @@
             this.saveButton.TabIndex = 11;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // cancelButton
             // 
@@ -113,6 +114,7 @@
             this.cancelButton.TabIndex = 10;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // NewUserForm
             // 
