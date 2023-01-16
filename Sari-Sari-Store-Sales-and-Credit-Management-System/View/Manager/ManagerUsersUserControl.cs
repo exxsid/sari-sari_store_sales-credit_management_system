@@ -7,16 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.Model;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.UserForms;
+using Sari_Sari_Store_Sales_and_Credit_Management_System.Misc;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 {
     public partial class ManagerUsersUserControl : UserControl
     {
+        private MySqlConnection _connection;
         public ManagerUsersUserControl()
         {
             InitializeComponent();
+        }
+        
+        private void ManagerUsersUserControl_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                // initialize the connection to database
+                _connection = DBConnector.Connector();
+                _connection.Open();
+
+                _connection.Close();
+
+            }
+            catch (Exception)
+            {
+                // when there is error in connection to the database
+                MessageBox.Show("Fail to connect to database users");
+            }
         }
 
         private void newUserButton_Click(object sender, EventArgs e)
@@ -34,14 +55,18 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                 // create a Produc object
                 // store values from the selected row
                 // TODO: check again the cell name
-                User updateUser = new User();
-                updateUser.Id = int.Parse(selectedRow.Cells["id"].Value.ToString());
-                updateUser.Name = selectedRow.Cells["name"].Value.ToString();
-                updateUser.Password = selectedRow.Cells["password"].Value.ToString();
-                updateUser.UserType = selectedRow.Cells["user_type"].Value.ToString().ElementAt(0);
+                User updateUser = new User(
+                    int.Parse(selectedRow.Cells[0].Value.ToString()),
+                    selectedRow.Cells[1].Value.ToString(),
+                    selectedRow.Cells[2].Value.ToString(),
+                    selectedRow.Cells[3].Value.ToString()
+                    );
+                //updateUser.Id = int.Parse(selectedRow.Cells[0].Value.ToString());
+                //updateUser.Name = selectedRow.Cells[1].Value.ToString();
+                //updateUser.Password = selectedRow.Cells[3].Value.ToString();
+                //updateUser.UserType = selectedRow.Cells[2].Value.ToString();
 
-                UpdateUserForm updateUserForm = new UpdateUserForm();
-                updateUserForm.User = updateUser;
+                UpdateUserForm updateUserForm = new UpdateUserForm(updateUser);
 
                 updateUserForm.Show();
 
@@ -58,6 +83,23 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
         private void deleteUserButton_Click(object sender, EventArgs e)
         {
             // TODO: message box User deletion
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            // load the data grid view
+            UserDAO userDAO = new UserDAO();
+            usersDataGridView.DataSource = userDAO.GetUsers();
+            SetTableHeader();
+            
+        }
+
+        private void SetTableHeader()
+        {
+            usersDataGridView.Columns[0].HeaderText = "ID";
+            usersDataGridView.Columns[1].HeaderText = "Name";
+            usersDataGridView.Columns[2].HeaderText = "Employee Type";
+            usersDataGridView.Columns[3].HeaderText = "Password";
         }
     }
 }
