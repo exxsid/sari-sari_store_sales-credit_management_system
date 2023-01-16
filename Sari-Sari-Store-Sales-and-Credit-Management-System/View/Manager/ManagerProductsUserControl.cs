@@ -48,7 +48,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                     selectedRow.Cells[1].Value.ToString(),
                     int.Parse(selectedRow.Cells[2].Value.ToString()),
                     double.Parse(selectedRow.Cells[3].Value.ToString()),
-                    double.Parse(selectedRow.Cells[4].Value.ToString())
+                    double.Parse(selectedRow.Cells[4].Value.ToString()),
+                    selectedRow.Cells[5].Value.ToString()
                     );
 
                 UpdateProductForm update = new UpdateProductForm(prod);
@@ -63,10 +64,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             }
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
@@ -84,6 +81,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             productsDataGrid.Columns[2].HeaderText = "Quantity";
             productsDataGrid.Columns[3].HeaderText = "Retail Price";
             productsDataGrid.Columns[4].HeaderText = "Wholesale Price";
+            productsDataGrid.Columns[5].HeaderText = "Status";
         }
     }
 }

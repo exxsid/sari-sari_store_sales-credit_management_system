@@ -25,14 +25,16 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.Model
         private int Quantity;
         private double RetailPrice;
         private double WholesalePrice;
+        private string Status;
 
-        public Product( int id, string name, int quantity, double retailPrice, double wholesalePrice)
+        public Product( int id, string name, int quantity, double retailPrice, double wholesalePrice, string status)
         {
             Id = id;
             Name = name;
             Quantity = quantity;
             RetailPrice = retailPrice;
             WholesalePrice = wholesalePrice;
+            Status = status;
         }
 
         public int GetId()
@@ -58,6 +60,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.Model
         public double GetWholesalePrice()
         {
             return WholesalePrice;
+        }
+
+        public string GetStatus()
+        {
+            return Status;
         }
     }
 }

@@ -28,7 +28,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.Model
                 "products.name, " +
                 "products.quantity, " +
                 "products.retail_price, " +
-                "purchase.wholesale_price " +
+                "purchase.wholesale_price, " +
+                "products.status " +
                 "FROM products " +
                 "LEFT JOIN purchase ON purchase.product_id = products.id;", _connection);
 
