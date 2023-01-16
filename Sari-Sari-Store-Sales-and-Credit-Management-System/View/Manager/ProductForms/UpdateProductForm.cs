@@ -61,7 +61,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.Produc
                 "quantity = @newQuantity, " +
                 "retail_price = @retPrice " +
                 "WHERE id = @prodId;";
-            // TODO: open() connection
             connection.Open();
             var cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@name", this.product.GetName());
@@ -83,7 +82,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.Produc
             var purchaseCmd = new MySqlCommand(purchaseQuery, connection);
             purchaseCmd.Parameters.AddWithValue("@prodId", this.product.GetId());
             purchaseCmd.Parameters.AddWithValue("@wholesalePrice", this.product.GetWholesalePrice());
-            purchaseCmd.Parameters.AddWithValue("@quantity", this.product.GetQuantity());
+            purchaseCmd.Parameters.AddWithValue("@quantity", this.quantityTextbox.Text.Trim());
 
             result = purchaseCmd.ExecuteNonQuery();
             if (result <= 0)
@@ -128,7 +127,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.Produc
                 "quantity = @newQuantity, " +
                 "retail_price = @retPrice " +
                 "WHERE id = @prodId;";
-            // TODO: open() connection
             connection.Open();
             var cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@name", this.product.GetName());

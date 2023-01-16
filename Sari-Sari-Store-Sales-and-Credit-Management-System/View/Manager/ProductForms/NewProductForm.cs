@@ -30,7 +30,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.Produc
 
         private void saveButton_Click(object sender, System.EventArgs e)
         {
-            // TODO: implement saving new product
             MySqlConnection connection = DBConnector.Connector();
             // open the connection
             connection.Open();
@@ -84,7 +83,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.Produc
 
         private bool IsInDatabase(string prodName)
         {
-            // TODO: implement saving new product
             MySqlConnection connection = DBConnector.Connector();
             // open the connection
             connection.Open();

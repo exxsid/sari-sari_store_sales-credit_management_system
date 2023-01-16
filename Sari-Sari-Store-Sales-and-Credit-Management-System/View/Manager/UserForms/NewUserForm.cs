@@ -24,7 +24,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.UserFo
             MySqlConnection connection = DBConnector.Connector();
             // open the connection
             connection.Open();
-
+            // checker for inputs
+            if (CheckTextBox())
+            {
+                connection.Close();
+                MessageBox.Show("Please fill out the textbox");
+                return;
+            }
             string query = "INSERT INTO employees (name, employee_type, password) " +
                 "VALUE (@name, @empType, @password);";
             var cmd = new MySqlCommand(query, connection);
@@ -45,6 +51,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.UserFo
             MessageBox.Show("Employee succesfuly Updated", "Complete",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+        }
+
+        private bool CheckTextBox()
+        {
+            return string.IsNullOrEmpty(this.nameTextbox.Text.Trim()) ||
+                string.IsNullOrEmpty(this.typeCombobox.Text.Trim()) ||
+                string.IsNullOrEmpty(this.passwordTextbox.Text.Trim());
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

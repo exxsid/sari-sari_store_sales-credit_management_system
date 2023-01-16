@@ -18,7 +18,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
         public ManagerProductsUserControl()
         {
-            // TODO: populate datagrid
             InitializeComponent();
         }
 
@@ -44,7 +43,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
                 // create a Produc object
                 // store values from the selected row
-                // TODO: check again the cell name
                 Product prod = new Product(
                     int.Parse(selectedRow.Cells[0].Value.ToString()),
                     selectedRow.Cells[1].Value.ToString(),
