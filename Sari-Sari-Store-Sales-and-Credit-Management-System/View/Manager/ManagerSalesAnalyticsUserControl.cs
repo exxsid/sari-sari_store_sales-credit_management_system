@@ -131,6 +131,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             {
                 conn.Close();
                 MessageBox.Show("No Top-selling for this month");
+                // clear the top selling table
+                topSellingDataGridView.DataSource = null;
                 return;
             }
             table.Load(reader);
