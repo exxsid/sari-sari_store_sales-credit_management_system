@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.Misc;
 using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
+using System.Windows.Media;
+using System.Security.Cryptography;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 {
@@ -18,6 +20,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
         public ManagerSalesAnalyticsUserControl()
         {
             InitializeComponent();
+            PopulateSaleAnalyticsDataGrid();
         }
 
         private void loadButton_Click(object sender, EventArgs e)
@@ -104,6 +107,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             #endregion
 
             PopulateTopSellingDataGrid(month, year);
+            PopulateSaleAnalyticsDataGrid();
         }
 
         private void PopulateTopSellingDataGrid(string month, string year)
@@ -132,6 +136,26 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             table.Load(reader);
             
             topSellingDataGridView.DataSource = table;
+
+            conn.Close();
+        }
+
+        private void PopulateSaleAnalyticsDataGrid()
+        {
+            MySqlConnection conn = DBConnector.Connector();
+            conn.Open();
+
+            string query = "SELECT sales.id, products.name, sale_details.price, sale_details.quantity, sales.date " +
+                "FROM sales " +
+                "JOIN sale_details ON sales.id = sale_details.sale_id " +
+                "JOIN products ON sale_details.product_id = products.id;";
+            var cmd = new MySqlCommand(query, conn);
+
+            var reader = cmd.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+
+            salesAnalyticsDatagridView.DataSource = table;
 
             conn.Close();
         }

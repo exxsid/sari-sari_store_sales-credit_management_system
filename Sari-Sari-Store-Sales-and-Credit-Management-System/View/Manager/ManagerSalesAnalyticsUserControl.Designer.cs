@@ -46,6 +46,7 @@
             // 
             this.salesAnalyticsDatagridView.AllowUserToAddRows = false;
             this.salesAnalyticsDatagridView.AllowUserToDeleteRows = false;
+            this.salesAnalyticsDatagridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.salesAnalyticsDatagridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.salesAnalyticsDatagridView.Dock = System.Windows.Forms.DockStyle.Right;
             this.salesAnalyticsDatagridView.Location = new System.Drawing.Point(317, 0);
