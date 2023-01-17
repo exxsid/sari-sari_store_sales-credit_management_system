@@ -35,7 +35,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.Produc
             connection.Open();
             
             // check if the product is in the database already
-            if (IsInDatabase(this.productNameTextbox.Text.Trim()))
+            if (!IsInDatabase(this.productNameTextbox.Text.Trim()))
             {
                 connection.Close();
                 MessageBox.Show("Product already exist.\nUse the update option instead.");
@@ -87,7 +87,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.Produc
             // open the connection
             connection.Open();
 
-            string query = "SELECT * FROM products WHERE name = " + prodName;
+            string query = "SELECT * FROM products WHERE name = '" + prodName + "'";
             var cmd = new MySqlCommand(query, connection);
             var reader = cmd.ExecuteReader();
             return reader.HasRows;
