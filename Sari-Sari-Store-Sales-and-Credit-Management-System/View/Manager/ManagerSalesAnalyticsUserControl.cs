@@ -38,22 +38,69 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             totalSaleCmd.Parameters.AddWithValue("@year", year);
             var ttlSaleReader = totalSaleCmd.ExecuteReader();
 
-            // when there is no sales in the specified moth and year
             ttlSaleReader.Read();
+            // when there is no sales in the specified moth and year
+            double totalSale = 0;
             if(ttlSaleReader.IsDBNull(0))
             {
-                conn.Close();
-                this.totalSaleDisplay.Text = "P " + 0;
-                return;
+                this.totalSaleDisplay.Text = "P 0";
             }
+            else
+            {
+                totalSale = ttlSaleReader.GetDouble(0);
+                this.totalSaleDisplay.Text = "P " + totalSale.ToString();
+            }
+            conn.Close();
+            
+            #endregion
 
-            double totalSale = ttlSaleReader.GetDouble(0);
-            this.totalSaleDisplay.Text = "P " + totalSale.ToString();
+            #region 
+            // get the previous month
+            DateTime prev = dateTimePicker.Value.AddMonths(-1);
+            string prevMonth = prev.ToString("MM");
+            string prevYear = prev.ToString("yyyy");
+            conn.Open();
+            string prevSaleQuery = "SELECT sum(price) FROM sale_details " +
+                "JOIN sales ON sale_details.sale_id = sales.id " +
+                "WHERE month(date) = @month AND year(date) = @year;";
+            var prevSaleCmd = new MySqlCommand(prevSaleQuery, conn);
+            prevSaleCmd.Parameters.AddWithValue("@month", prevMonth);
+            prevSaleCmd.Parameters.AddWithValue("@year", prevYear);
+            var prevReader = prevSaleCmd.ExecuteReader();
+
+            prevReader.Read();
+            double prevSale = 0;
+            if (prevReader.IsDBNull(0))
+            {
+                // both previous and currrent sale is zero
+                if (prevSale == 0 && totalSale == 0)
+                {
+                    this.comparisonDisplay.Text = "0%";
+                }
+                // the previous sale is the only zero
+                else if (prevSale == 0)
+                {
+                    this.comparisonDisplay.Text = "100%";
+                }
+            }
+            // previous sale more than zero
+            else
+            {
+                // the current sale is zero
+                if (totalSale == 0)
+                {
+                    this.comparisonDisplay.Text = "-100%";
+                }
+                // both previous and current sale is more than zero
+                else
+                {
+                    prevSale = prevReader.GetDouble(0);
+                    this.comparisonDisplay.Text = ((totalSale - prevSale) / prevSale * 100) + "%";
+                }
+            }
 
             conn.Close();
             #endregion
-
-            
         }
     }
 }

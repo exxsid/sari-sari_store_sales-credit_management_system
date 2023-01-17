@@ -91,9 +91,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 20);
+            this.label2.Size = new System.Drawing.Size(215, 20);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Comparision to last month:";
+            this.label2.Text = "Comparision to last month sale:";
             // 
             // label3
             // 
