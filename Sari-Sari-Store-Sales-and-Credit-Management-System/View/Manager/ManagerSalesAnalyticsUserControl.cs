@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.Misc;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 {
@@ -54,7 +55,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             
             #endregion
 
-            #region 
+            #region comparison
             // get the previous month
             DateTime prev = dateTimePicker.Value.AddMonths(-1);
             string prevMonth = prev.ToString("MM");
@@ -101,6 +102,38 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
             conn.Close();
             #endregion
+
+            PopulateTopSellingDataGrid(month, year);
+        }
+
+        private void PopulateTopSellingDataGrid(string month, string year)
+        {
+            MySqlConnection conn = DBConnector.Connector();
+            conn.Open();
+
+            string query = "SELECT products.name as 'Product Name', SUM(sale_details.price) as 'Total sale price' " +
+                "FROM products " +
+                "JOIN sale_details ON products.id = sale_details.product_id " +
+                "JOIN sales ON sale_details.sale_id = sales.id " +
+                "WHERE MONTH(sales.date) = @month AND year(sales.date) = @year " +
+                "GROUP BY products.name;";
+            var cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@month", month);
+            cmd.Parameters.AddWithValue("@year", year);
+
+            var reader = cmd.ExecuteReader();
+            DataTable table = new DataTable();
+            if (!reader.HasRows)
+            {
+                conn.Close();
+                MessageBox.Show("No Top-selling for this month");
+                return;
+            }
+            table.Load(reader);
+            
+            topSellingDataGridView.DataSource = table;
+
+            conn.Close();
         }
     }
 }

@@ -37,11 +37,9 @@
             this.totalSaleDisplay = new System.Windows.Forms.Label();
             this.comparisonDisplay = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.topSellingDataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.salesAnalyticsDatagridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topSellingDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // salesAnalyticsDatagridView
@@ -131,40 +129,25 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Total Sales increased by";
             // 
-            // dataGridView1
+            // topSellingDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(63, 231);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 11;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Product Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Sales";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.topSellingDataGridView.AllowUserToAddRows = false;
+            this.topSellingDataGridView.AllowUserToDeleteRows = false;
+            this.topSellingDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.topSellingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.topSellingDataGridView.Location = new System.Drawing.Point(63, 231);
+            this.topSellingDataGridView.Name = "topSellingDataGridView";
+            this.topSellingDataGridView.ReadOnly = true;
+            this.topSellingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.topSellingDataGridView.Size = new System.Drawing.Size(240, 150);
+            this.topSellingDataGridView.TabIndex = 11;
             // 
             // ManagerSalesAnalyticsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.topSellingDataGridView);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comparisonDisplay);
             this.Controls.Add(this.totalSaleDisplay);
@@ -179,7 +162,7 @@
             this.Name = "ManagerSalesAnalyticsUserControl";
             this.Size = new System.Drawing.Size(675, 403);
             ((System.ComponentModel.ISupportInitialize)(this.salesAnalyticsDatagridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topSellingDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,8 +179,6 @@
         private System.Windows.Forms.Label totalSaleDisplay;
         private System.Windows.Forms.Label comparisonDisplay;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridView topSellingDataGridView;
     }
 }
