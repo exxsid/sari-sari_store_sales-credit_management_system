@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using MySql.Data.MySqlClient;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.Misc;
 
@@ -14,6 +15,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 {
     public partial class ManagerSaleUserControl : UserControl
     {
+        private string _customerName;
+        private string _customerPhone;
         public ManagerSaleUserControl()
         {
             InitializeComponent();
@@ -243,36 +246,37 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             if (!string.IsNullOrEmpty(this.customerNameCombobox.Text.Trim())) 
             {
                 int customerId = 0;
-                // when the customer do not have 
+                // when the customer do not have payment
                 if (string.IsNullOrEmpty(this.paymentTextbox.Text.Trim()))
                 {
                     this.paymentTextbox.Text = 0.ToString();
                 }
                 // then check if the customer is already exist in the database
-                if (!CustomerIsInDatabase(this.customerNameCombobox.Text.Trim()))
+                
+                if (!CustomerIsInDatabase(_customerName))
                 {
                     conn.Open();
                     // add the new customer to database
                     string addCustQuery = "INSERT INTO customers (name, phone_number) " +
-                        "VALUE ('@name', @phoneNumber);";
+                        "VALUE (@name, @phoneNumber);";
                     var addCmd = new MySqlCommand(addCustQuery, conn);
-                    addCmd.Parameters.AddWithValue("@name", this.customerNameCombobox.Text.Trim());
-                    addCmd.Parameters.AddWithValue("@phoneNumber", this.customerPhoneCombobox.Text.Trim());
+                    addCmd.Parameters.AddWithValue("@name", _customerName);
+                    addCmd.Parameters.AddWithValue("@phoneNumber", _customerPhone);
 
                     var result = addCmd.ExecuteNonQuery();
                     conn.Close();
                 }
                 // get the customer's id
                 conn.Open();
-                string query = "SELECT id FROM customers WHERE name = '" + 
-                        this.customerNameCombobox.Text.Trim() + "'";
-                var cmd = new MySqlCommand(query, conn);
+                string custQuery = "SELECT id FROM customers WHERE name = '" + 
+                        _customerName + "'";
+                var custCmd = new MySqlCommand(custQuery, conn);
 
-                var reader = cmd.ExecuteReader();
+                var custReader = custCmd.ExecuteReader();
 
-                reader.Read();
+                custReader.Read();
 
-                customerId = reader.GetInt32(0);
+                customerId = custReader.GetInt32(0);
                 conn.Close();
                 // calculate the amount due
                 // the amount that the customer still needed to pay
@@ -450,7 +454,9 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             string query = "SELECT * FROM customers WHERE name = '" + name + "'";
             var cmd = new MySqlCommand(query, connection);
             var reader = cmd.ExecuteReader();
-            return reader.HasRows;
+            bool val = reader.HasRows;
+            connection.Close();
+            return val;
         }
 
         private void customerNameCombobox_SelectedValueChanged(object sender, EventArgs e)
@@ -490,6 +496,16 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             customerPhoneCombobox.DataSource = null;
             conn.Close();
 
+        }
+
+        private void customerNameCombobox_TextChanged(object sender, EventArgs e)
+        {
+            _customerName = customerNameCombobox.Text;
+        }
+
+        private void customerPhoneCombobox_TextChanged(object sender, EventArgs e)
+        {
+            _customerPhone = customerPhoneCombobox.Text;
         }
     }
 }

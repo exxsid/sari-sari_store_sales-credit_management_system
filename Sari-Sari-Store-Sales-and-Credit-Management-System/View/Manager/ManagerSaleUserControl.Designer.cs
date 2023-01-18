@@ -37,6 +37,9 @@
             this.unitPriceLabel = new System.Windows.Forms.Label();
             this.unitPriceTextBox = new System.Windows.Forms.TextBox();
             this.saleDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPriceLabel = new System.Windows.Forms.Label();
             this.totalPriceTextbox = new System.Windows.Forms.TextBox();
             this.addProductButton = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@
             this.paymentLabel = new System.Windows.Forms.Label();
             this.customerNameCombobox = new System.Windows.Forms.ComboBox();
             this.customerPhoneCombobox = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.saleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,6 +142,24 @@
             this.saleDataGridView.Size = new System.Drawing.Size(480, 150);
             this.saleDataGridView.TabIndex = 10;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Product Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Quantity";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Unit Price";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // totalPriceLabel
             // 
             this.totalPriceLabel.AutoSize = true;
@@ -230,6 +248,7 @@
             this.customerNameCombobox.Size = new System.Drawing.Size(200, 29);
             this.customerNameCombobox.TabIndex = 20;
             this.customerNameCombobox.SelectedValueChanged += new System.EventHandler(this.customerNameCombobox_SelectedValueChanged);
+            this.customerNameCombobox.TextChanged += new System.EventHandler(this.customerNameCombobox_TextChanged);
             // 
             // customerPhoneCombobox
             // 
@@ -238,24 +257,7 @@
             this.customerPhoneCombobox.Name = "customerPhoneCombobox";
             this.customerPhoneCombobox.Size = new System.Drawing.Size(200, 29);
             this.customerPhoneCombobox.TabIndex = 21;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Product Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Quantity";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Unit Price";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.customerPhoneCombobox.TextChanged += new System.EventHandler(this.customerPhoneCombobox_TextChanged);
             // 
             // ManagerSaleUserControl
             // 
