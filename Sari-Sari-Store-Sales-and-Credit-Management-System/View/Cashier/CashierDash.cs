@@ -34,7 +34,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             this.cashierHomeTab1.Show();
             this.cashierHomeTab1.BringToFront();
             // then hide other page
-            this.cashierSaleTab1.Hide();
+            this.saleUserControl.Hide();
             this.cashierCreditPayment1.Hide();
 
             // set the username in the usernameLabel
@@ -52,7 +52,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             this.cashierHomeTab1.Show();
             this.cashierHomeTab1.BringToFront();
             // then hide other page
-            this.cashierSaleTab1.Hide();
+            this.saleUserControl.Hide();
             this.cashierCreditPayment1.Hide();
         }
         #endregion
@@ -64,8 +64,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             setToActiveButtonBackColor(this.saleButton);
 
             // show the sale page
-            this.cashierSaleTab1.Show();
-            this.cashierSaleTab1.BringToFront();
+            this.saleUserControl.Show();
+            this.saleUserControl.BringToFront();
             // then hide other page
             this.cashierHomeTab1.Hide();
             this.cashierCreditPayment1.Hide();
@@ -82,7 +82,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             this.cashierCreditPayment1.Show();
             this.cashierCreditPayment1.BringToFront();
             // then hide other page
-            this.cashierSaleTab1.Hide();
+            this.saleUserControl.Hide();
             this.cashierHomeTab1.Hide();
             
         }

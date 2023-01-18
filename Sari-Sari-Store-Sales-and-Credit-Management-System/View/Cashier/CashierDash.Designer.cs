@@ -42,7 +42,7 @@
             this.cashierCreditPayment2 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierCreditPaymentTab();
             this.cashierHomeTab1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierHomeTab();
             this.cashierCreditPayment1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierCreditPaymentTab();
-            this.cashierSaleTab1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Cashier.CashierSaleTab();
+            this.saleUserControl = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sideNavBar.SuspendLayout();
@@ -224,20 +224,23 @@
             this.cashierCreditPayment1.Size = new System.Drawing.Size(722, 478);
             this.cashierCreditPayment1.TabIndex = 6;
             // 
-            // cashierSaleTab1
+            // saleUserControl
             // 
-            this.cashierSaleTab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.cashierSaleTab1.Location = new System.Drawing.Point(194, 47);
-            this.cashierSaleTab1.Name = "cashierSaleTab1";
-            this.cashierSaleTab1.Size = new System.Drawing.Size(765, 403);
-            this.cashierSaleTab1.TabIndex = 8;
+            this.saleUserControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.saleUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saleUserControl.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saleUserControl.Location = new System.Drawing.Point(194, 48);
+            this.saleUserControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.saleUserControl.Name = "saleUserControl";
+            this.saleUserControl.Size = new System.Drawing.Size(690, 428);
+            this.saleUserControl.TabIndex = 8;
             // 
             // CashierDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 476);
-            this.Controls.Add(this.cashierSaleTab1);
+            this.Controls.Add(this.saleUserControl);
             this.Controls.Add(this.cashierCreditPayment2);
             this.Controls.Add(this.cashierHomeTab1);
             this.Controls.Add(this.panel1);
@@ -272,6 +275,6 @@
         private View.Cashier.CashierHomeTab cashierHomeTab1;
         private View.Cashier.CashierCreditPaymentTab cashierCreditPayment1;
         private View.Cashier.CashierCreditPaymentTab cashierCreditPayment2;
-        private View.Cashier.CashierSaleTab cashierSaleTab1;
+        private View.Manager.ManagerSaleUserControl saleUserControl;
     }
 }
