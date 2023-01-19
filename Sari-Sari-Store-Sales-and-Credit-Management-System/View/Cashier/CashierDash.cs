@@ -35,7 +35,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             this.cashierHomeTab1.BringToFront();
             // then hide other page
             this.saleUserControl.Hide();
-            this.cashierCreditPayment1.Hide();
+            this.creditPaymentUserControl1.Hide();
 
             // set the username in the usernameLabel
             this.usernameLabel.Text = this.cashier;
