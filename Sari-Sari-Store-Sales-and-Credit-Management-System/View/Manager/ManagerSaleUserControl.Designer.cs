@@ -40,6 +40,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPriceLabel = new System.Windows.Forms.Label();
             this.totalPriceTextbox = new System.Windows.Forms.TextBox();
             this.addProductButton = new System.Windows.Forms.Button();
@@ -50,6 +51,8 @@
             this.paymentLabel = new System.Windows.Forms.Label();
             this.customerNameCombobox = new System.Windows.Forms.ComboBox();
             this.customerPhoneCombobox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.totalQuantityTextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.saleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +82,7 @@
             this.productCombobox.Name = "productCombobox";
             this.productCombobox.Size = new System.Drawing.Size(250, 29);
             this.productCombobox.TabIndex = 4;
-            this.productCombobox.SelectedValueChanged += new System.EventHandler(this.productCombobox_SelectedValueChanged);
+            this.productCombobox.SelectedIndexChanged += new System.EventHandler(this.productCombobox_SelectedIndexChanged);
             // 
             // productLabel
             // 
@@ -96,6 +99,8 @@
             this.quantityTextbox.Name = "quantityTextbox";
             this.quantityTextbox.Size = new System.Drawing.Size(109, 26);
             this.quantityTextbox.TabIndex = 6;
+            this.quantityTextbox.Text = "1";
+            this.quantityTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.quantityTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.quantityTextbox_KeyPress);
             // 
             // quantityLabel
@@ -124,6 +129,7 @@
             this.unitPriceTextBox.ReadOnly = true;
             this.unitPriceTextBox.Size = new System.Drawing.Size(109, 26);
             this.unitPriceTextBox.TabIndex = 8;
+            this.unitPriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // saleDataGridView
             // 
@@ -134,7 +140,8 @@
             this.saleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column4});
             this.saleDataGridView.Location = new System.Drawing.Point(35, 165);
             this.saleDataGridView.Name = "saleDataGridView";
             this.saleDataGridView.ReadOnly = true;
@@ -144,7 +151,7 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Product Name";
+            this.Column1.HeaderText = "Item";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -159,6 +166,12 @@
             this.Column3.HeaderText = "Unit Price";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Amount";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // totalPriceLabel
             // 
@@ -177,6 +190,7 @@
             this.totalPriceTextbox.ReadOnly = true;
             this.totalPriceTextbox.Size = new System.Drawing.Size(109, 26);
             this.totalPriceTextbox.TabIndex = 11;
+            this.totalPriceTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // addProductButton
             // 
@@ -230,6 +244,7 @@
             this.paymentTextbox.Name = "paymentTextbox";
             this.paymentTextbox.Size = new System.Drawing.Size(201, 26);
             this.paymentTextbox.TabIndex = 19;
+            this.paymentTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.paymentTextbox.Leave += new System.EventHandler(this.paymentTextbox_Leave);
             // 
             // paymentLabel
@@ -260,11 +275,32 @@
             this.customerPhoneCombobox.TabIndex = 21;
             this.customerPhoneCombobox.TextChanged += new System.EventHandler(this.customerPhoneCombobox_TextChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(86, 325);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 21);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Total Quantity";
+            // 
+            // totalQuantityTextbox
+            // 
+            this.totalQuantityTextbox.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.totalQuantityTextbox.Location = new System.Drawing.Point(196, 322);
+            this.totalQuantityTextbox.Name = "totalQuantityTextbox";
+            this.totalQuantityTextbox.ReadOnly = true;
+            this.totalQuantityTextbox.Size = new System.Drawing.Size(109, 26);
+            this.totalQuantityTextbox.TabIndex = 22;
+            this.totalQuantityTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ManagerSaleUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.totalQuantityTextbox);
             this.Controls.Add(this.customerPhoneCombobox);
             this.Controls.Add(this.customerNameCombobox);
             this.Controls.Add(this.paymentTextbox);
@@ -288,6 +324,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerSaleUserControl";
             this.Size = new System.Drawing.Size(675, 403);
+            this.Load += new System.EventHandler(this.ManagerSaleUserControl_Load);
             this.VisibleChanged += new System.EventHandler(this.ManagerSaleUserControl_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.saleDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -316,8 +353,11 @@
         private System.Windows.Forms.Label paymentLabel;
         private System.Windows.Forms.ComboBox customerNameCombobox;
         private System.Windows.Forms.ComboBox customerPhoneCombobox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox totalQuantityTextbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

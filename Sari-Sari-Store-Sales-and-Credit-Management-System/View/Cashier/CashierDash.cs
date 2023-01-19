@@ -36,8 +36,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             this.cashierHomeTab1.Show();
             this.cashierHomeTab1.BringToFront();
             // then hide other page
-            this.saleUserControl.Hide();
-            this.creditPaymentUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
+            this.managerSaleUserControl1.Hide();
 
             // set the username in the usernameLabel
             this.usernameLabel.Text = this.cashier;
@@ -54,8 +54,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             this.cashierHomeTab1.Show();
             this.cashierHomeTab1.BringToFront();
             // then hide other page
-            this.saleUserControl.Hide();
-            this.creditPaymentUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
+            this.managerSaleUserControl1.Hide(); ;
         }
         #endregion
 
@@ -66,11 +66,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             setToActiveButtonBackColor(this.saleButton);
 
             // show the sale page
-            this.saleUserControl.Show();
-            this.saleUserControl.BringToFront();
+            this.managerSaleUserControl1.Show();
+            this.managerSaleUserControl1.BringToFront();
             // then hide other page
             this.cashierHomeTab1.Hide();
-            this.creditPaymentUserControl1.Hide();
+            this.managerCreditPaymentUserControl1.Hide();
         }
         #endregion
 
@@ -81,12 +81,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             setToActiveButtonBackColor(this.creditPaymentButton);
 
             // show the home page
-            this.creditPaymentUserControl1.Show();
-            this.creditPaymentUserControl1.BringToFront();
+            this.managerCreditPaymentUserControl1.Show();
+            this.managerCreditPaymentUserControl1.BringToFront();
             // then hide other page
-            this.saleUserControl.Hide();
+            this.managerSaleUserControl1.Hide();
             this.cashierHomeTab1.Hide();
-            
         }
         #endregion
 
@@ -136,10 +135,6 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
         {
             FromPage.Show();
         }
-
-
-
-
 
         //usernameLabel.Text = cashier;
         //   this.cashierHomeTab1.Show();

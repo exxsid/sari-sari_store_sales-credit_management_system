@@ -42,5 +42,27 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.Model
             return dTable;
         }
 
+        public DataTable GetAvailableProducts()
+        {
+            DataTable dTable = new DataTable();
+
+            _connection.Open();
+            var cmd = new MySqlCommand("SELECT products.id, " +
+                "products.name, " +
+                "products.quantity, " +
+                "products.retail_price, " +
+                "products.status " +
+                "FROM products " +
+                "WHERE quantity >= 1", _connection);
+
+            var reader = cmd.ExecuteReader();
+
+            dTable.Load(reader);
+
+            _connection.Close();
+
+            return dTable;
+        }
+
     }
 }
