@@ -53,7 +53,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.Model
                 "products.retail_price, " +
                 "products.status " +
                 "FROM products " +
-                "WHERE quantity >= 1", _connection);
+                "WHERE quantity >= 1 AND status = 'Available'", _connection);
 
             var reader = cmd.ExecuteReader();
 
