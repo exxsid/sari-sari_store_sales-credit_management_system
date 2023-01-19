@@ -115,12 +115,15 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             MySqlConnection conn = DBConnector.Connector();
             conn.Open();
 
-            string query = "SELECT products.name as 'Product Name', SUM(sale_details.price) as 'Total sale price' " +
+            string query = "SELECT products.name as 'Product Name', " +
+                "COUNT(sale_details.quantity) as 'Quantity', " +
+                "SUM(sale_details.price) as 'Total sale price' " +
                 "FROM products " +
                 "JOIN sale_details ON products.id = sale_details.product_id " +
                 "JOIN sales ON sale_details.sale_id = sales.id " +
                 "WHERE MONTH(sales.date) = @month AND year(sales.date) = @year " +
-                "GROUP BY products.name;";
+                "GROUP BY products.name " +
+                "ORDER BY 2 DESC;";
             var cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@month", month);
             cmd.Parameters.AddWithValue("@year", year);

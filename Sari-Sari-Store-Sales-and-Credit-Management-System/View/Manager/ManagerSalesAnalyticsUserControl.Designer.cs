@@ -136,11 +136,11 @@
             this.topSellingDataGridView.AllowUserToDeleteRows = false;
             this.topSellingDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.topSellingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.topSellingDataGridView.Location = new System.Drawing.Point(63, 231);
+            this.topSellingDataGridView.Location = new System.Drawing.Point(3, 231);
             this.topSellingDataGridView.Name = "topSellingDataGridView";
             this.topSellingDataGridView.ReadOnly = true;
             this.topSellingDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.topSellingDataGridView.Size = new System.Drawing.Size(240, 150);
+            this.topSellingDataGridView.Size = new System.Drawing.Size(308, 169);
             this.topSellingDataGridView.TabIndex = 11;
             // 
             // ManagerSalesAnalyticsUserControl
