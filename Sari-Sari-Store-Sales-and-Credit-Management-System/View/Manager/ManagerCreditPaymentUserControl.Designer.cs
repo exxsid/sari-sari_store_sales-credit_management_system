@@ -66,6 +66,7 @@
             this.nameCombox.Name = "nameCombox";
             this.nameCombox.Size = new System.Drawing.Size(185, 28);
             this.nameCombox.TabIndex = 2;
+            this.nameCombox.SelectedValueChanged += new System.EventHandler(this.nameCombox_SelectedValueChanged);
             // 
             // phoneCombox
             // 
@@ -104,9 +105,9 @@
             // 
             // creditAmountTextBox
             // 
+            this.creditAmountTextBox.Enabled = false;
             this.creditAmountTextBox.Location = new System.Drawing.Point(291, 187);
             this.creditAmountTextBox.Name = "creditAmountTextBox";
-            this.creditAmountTextBox.ReadOnly = true;
             this.creditAmountTextBox.Size = new System.Drawing.Size(185, 25);
             this.creditAmountTextBox.TabIndex = 7;
             // 
