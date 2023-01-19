@@ -82,7 +82,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             double totalCreditAmount = 0;
             if (!creditAmountReader.HasRows)
             {
-                MessageBox.Show("Customer is not found");
+                //MessageBox.Show("Customer is not found");
                 conn.Close();
                 return;
             }
@@ -97,6 +97,26 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
 
 
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            // message box employee deletion
+            DialogResult cancelConfirmation = MessageBox.Show("Are you sure you want to cancel the credit payment?",
+                                   "Confirmation", MessageBoxButtons.OKCancel);
+            // when the user click cancel
+            // the form's inputs will not be cleared
+            if (cancelConfirmation == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            // clear all form's input
+            nameCombox.ResetText();
+            phoneCombox.ResetText();
+            phoneCombox.DataSource = null;
+            creditAmountTextBox.ResetText();
+            paymentTextbox.ResetText();
         }
     }
 }
