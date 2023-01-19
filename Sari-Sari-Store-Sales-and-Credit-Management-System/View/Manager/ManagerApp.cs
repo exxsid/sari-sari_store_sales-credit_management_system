@@ -16,11 +16,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
         private System.Drawing.Color ACTIVE_BUTTON_BACK_COLOR = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
 
         private string username;
+        private Form FromPage;
 
-        public ManagerApp(string username)
+        public ManagerApp(string username, Form FromPage)
         {
             InitializeComponent();
             this.username = username;
+            this.FromPage = FromPage;
         }
 
         private void ManagerApp_Load(object sender, EventArgs e)
@@ -251,6 +253,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
         private void usernameLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ManagerApp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FromPage.Show();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 {
     public partial class Login : Form
     {
-        string connect = "server=localhost;port=3306;user=root;password='';database=sari-sari_store";
+        string connect = "server=localhost;port=3306;user=root;password='';database=mini-mart";
 
         public Login()
         {
@@ -29,7 +29,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             MySqlConnection connection = new MySqlConnection(connect);
             connection.Open();
 
-            string query = "SELECT * FROM user WHERE id = @IDNumber AND password = @Password";
+            string query = "SELECT * FROM employees WHERE id = @IDNumber AND password = @Password";
             
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@IDNumber", IDNumber);
@@ -45,19 +45,19 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 
             while (reader.Read()) {
 
-                string accountType = reader["user_type"].ToString();
+                string accountType = reader["employee_type"].ToString();
                 string name = reader["name"].ToString();
 
-                if (accountType == "M")
+                if (accountType == "Manager")
                 {
-                    View.ManagerApp next = new View.ManagerApp(name);
+                    View.ManagerApp next = new View.ManagerApp(name, this);
                     next.Show();
                     this.Hide();
 
                 }
-                else if (accountType == "C")
+                else if (accountType == "Cashier")
                 {
-                    CashierDash next = new CashierDash(name);
+                    CashierDash next = new CashierDash(name, this);
                     next.Show();
                     this.Hide();
                 }

@@ -255,6 +255,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierDash";
             this.Load += new System.EventHandler(this.CashierDash_Load);
+            this.VisibleChanged += new System.EventHandler(this.CashierDash_VisibleChanged);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sideNavBar.ResumeLayout(false);

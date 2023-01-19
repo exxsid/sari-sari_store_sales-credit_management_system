@@ -16,11 +16,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
         private System.Drawing.Color ACTIVE_BUTTON_BACK_COLOR = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
 
         private string cashier;
+        private Form FromPage;
 
-        public CashierDash(string cashier)
+        public CashierDash(string cashier, Form fromPage)
         {
             InitializeComponent();
-            this.cashier= cashier;
+            this.cashier = cashier;
+            FromPage = fromPage;
         }
 
         private void CashierDash_Load(object sender, EventArgs e)
@@ -120,7 +122,12 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             }
         }
 
-        
+        private void CashierDash_VisibleChanged(object sender, EventArgs e)
+        {
+            FromPage.Show();
+        }
+
+
 
 
 
