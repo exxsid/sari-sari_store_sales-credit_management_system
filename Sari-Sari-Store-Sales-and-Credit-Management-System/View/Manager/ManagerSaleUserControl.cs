@@ -345,7 +345,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                         "VALUE (@saleId, @amount, 'Credit')";
                     var paymentCmd = new MySqlCommand(paymentQuery, conn);
                     paymentCmd.Parameters.AddWithValue("@saleId", salesId);
-                    paymentCmd.Parameters.AddWithValue("@amount", this.totalPriceTextbox.Text);
+                    paymentCmd.Parameters.AddWithValue("@amount", this.paymentTextbox.Text);
 
                     var paymentResult = paymentCmd.ExecuteNonQuery();
                     conn.Close();
