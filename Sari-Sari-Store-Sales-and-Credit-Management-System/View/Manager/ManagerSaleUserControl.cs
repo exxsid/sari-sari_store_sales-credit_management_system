@@ -347,14 +347,20 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                         var paymentResult = paymentCmd.ExecuteNonQuery();
                         conn.Close();
                     }
+                    
+                    // get the credit that the customer have in the particular
+                    // sale transaction
+                    double credit = double.Parse(this.totalPriceTextbox.Text.Trim()) - 
+                        double.Parse(this.paymentTextbox.Text.Trim());
+                    this.paymentTextbox.Text = 0.ToString();
+                    MessageBox.Show("Successfully save sale\nChange: 0\nCredit: " +
+                        Math.Abs(credit));
                     // clear all textbox
                     saleDataGridView.Rows.Clear();
                     // set the total price
                     SetTotalPrice();
                     // set the total quantity
                     SetTotalQuantity();
-                    this.paymentTextbox.Text = 0.ToString();
-                    MessageBox.Show("Successfully save sale\nChange: 0");
                     return;
                 }
 
@@ -434,14 +440,17 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
                 var paymentResult1 = paymentCmd1.ExecuteNonQuery();
                 conn.Close();
+                
+                double totalPrice = double.Parse(this.totalPriceTextbox.Text);
+                double payment = double.Parse(this.paymentTextbox.Text.Trim());
+                double change = totalPrice - payment;
+                this.paymentTextbox.Text = 0.ToString();
                 // clear all textbox
                 saleDataGridView.Rows.Clear();
                 // set the total price
                 SetTotalPrice();
                 // set the total quantity
                 SetTotalQuantity();
-                this.paymentTextbox.Text = 0.ToString();
-                double change = double.Parse(this.totalPriceTextbox.Text) - double.Parse(this.paymentTextbox.Text.Trim());
 
                 MessageBox.Show("Successfully save sale\nChange: " + Math.Abs(change));
                 #endregion
