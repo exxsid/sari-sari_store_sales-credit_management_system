@@ -12,6 +12,7 @@ using Sari_Sari_Store_Sales_and_Credit_Management_System.Misc;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.Model;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ProductForms;
 using MySql.Data.MySqlClient;
+using System.Data.Common;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 {
@@ -21,6 +22,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
         public ManagerProductsUserControl()
         {
             InitializeComponent();
+            // re/load the the datagrid for products
+            ProductDAO productDao = new ProductDAO();
+
+            productsDataGrid.DataSource = productDao.GetProducts();
+            SetTableHeader();
         }
 
         private void ManagerProductsUserControl_Load(object sender, EventArgs e)
@@ -129,6 +135,30 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
             MessageBox.Show("Product status succesfuly Updated", "Complete",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = DBConnector.Connector();
+
+            conn.Open();
+            if (string.IsNullOrEmpty(searchBar.Text.Trim()))
+            {
+                MessageBox.Show("Fill out the search bar.");
+                conn.Close();
+                return;
+            }
+
+            string query = "SELECT * " +
+                "FROM products " +
+                "WHERE name LIKE '%" + searchBar.Text.Trim() + "%';";
+            var cmd = new MySqlCommand(query, conn);
+            var reader = cmd.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+            productsDataGrid.DataSource = table;
+            conn.Close();
+            SetTableHeader();
         }
     }
 }

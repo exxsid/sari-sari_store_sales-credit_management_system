@@ -21,7 +21,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
         {
             InitializeComponent();
         }
-        
+
         private void ManagerUsersUserControl_Load(object sender, EventArgs e)
         {
             try
@@ -32,6 +32,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
                 _connection.Close();
 
+                PopulateUsersTable();
             }
             catch (Exception)
             {
@@ -114,11 +115,15 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
+            PopulateUsersTable();
+        }
+
+        private void PopulateUsersTable()
+        {
             // load the data grid view
             UserDAO userDAO = new UserDAO();
             usersDataGridView.DataSource = userDAO.GetUsers();
             SetTableHeader();
-            
         }
 
         private void SetTableHeader()
@@ -127,6 +132,29 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             usersDataGridView.Columns[1].HeaderText = "Name";
             usersDataGridView.Columns[2].HeaderText = "Employee Type";
             usersDataGridView.Columns[3].HeaderText = "Password";
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            _connection.Open();
+
+            if (string.IsNullOrEmpty(searchBar.Text.Trim()))
+            {
+                MessageBox.Show("Fill out the search bar.");
+                _connection.Close();
+                return;
+            }
+
+            string query = "SELECT * " +
+                "FROM employees " +
+                "WHERE name LIKE '%" + searchBar.Text.Trim() + "%';";
+            var cmd = new MySqlCommand(query, _connection);
+            var reader = cmd.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(reader);
+            usersDataGridView.DataSource = table;
+            _connection.Close();
+            SetTableHeader();
         }
     }
 }
