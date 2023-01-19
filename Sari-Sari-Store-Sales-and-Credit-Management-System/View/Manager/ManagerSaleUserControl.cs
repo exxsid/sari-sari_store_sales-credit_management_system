@@ -173,7 +173,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
             string query = "SELECT retail_price " +
                 "FROM products " +
-                "WHERE name = '" + productCombobox.SelectedValue.ToString() + "'";
+                "WHERE name = '" + productCombobox.SelectedValue.ToString() + "' " +
+                "AND status = 'Available'";
             var cmd = new MySqlCommand(query, conn);
 
             var reader = cmd.ExecuteReader();
