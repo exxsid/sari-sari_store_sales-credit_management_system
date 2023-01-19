@@ -230,6 +230,7 @@
             this.paymentTextbox.Name = "paymentTextbox";
             this.paymentTextbox.Size = new System.Drawing.Size(201, 26);
             this.paymentTextbox.TabIndex = 19;
+            this.paymentTextbox.Leave += new System.EventHandler(this.paymentTextbox_Leave);
             // 
             // paymentLabel
             // 

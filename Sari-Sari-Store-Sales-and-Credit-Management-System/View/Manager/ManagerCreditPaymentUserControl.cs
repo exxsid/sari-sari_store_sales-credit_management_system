@@ -239,5 +239,15 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                 string.IsNullOrEmpty(phoneCombox.Text.Trim()) ||
                 string.IsNullOrEmpty(paymentTextbox.Text.Trim());
         }
+
+        private void paymentTextbox_Leave(object sender, EventArgs e)
+        {
+            decimal payment;
+            if (!decimal.TryParse(paymentTextbox.Text, out payment) || payment < 0)
+            {
+                MessageBox.Show("Invalid Payment Value. Please enter a valid positive amount.");
+                paymentTextbox.Focus();
+            }
+        }
     }
 }
