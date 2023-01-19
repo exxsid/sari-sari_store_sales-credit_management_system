@@ -175,6 +175,7 @@
             this.logoutButton.Text = "Logout";
             this.logoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // usernameLabel
             // 
@@ -254,6 +255,7 @@
             this.Name = "CashierDash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierDash";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CashierDash_FormClosing);
             this.Load += new System.EventHandler(this.CashierDash_Load);
             this.VisibleChanged += new System.EventHandler(this.CashierDash_VisibleChanged);
             this.panel2.ResumeLayout(false);

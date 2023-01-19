@@ -127,6 +127,16 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
             FromPage.Show();
         }
 
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CashierDash_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FromPage.Show();
+        }
+
 
 
 

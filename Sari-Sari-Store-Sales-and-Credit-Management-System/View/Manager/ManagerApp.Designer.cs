@@ -45,13 +45,13 @@
             this.logoutButton = new FontAwesome.Sharp.IconButton();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.profileButton = new FontAwesome.Sharp.IconButton();
+            this.managerSaleUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
+            this.managerHomeUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl();
             this.managerCreditPaymentUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditPaymentUserControl();
             this.managerCreditAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerCreditAnalyticsUserControl();
             this.managerSalesAnalyticsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSalesAnalyticsUserControl();
             this.managerUsersUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerUsersUserControl();
             this.managerProductsUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerProductsUserControl();
-            this.managerSaleUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerSaleUserControl();
-            this.managerHomeUserControl1 = new Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ManagerHomeUserControl();
             this.sideNavBar.SuspendLayout();
             this.analyticsSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -300,6 +300,7 @@
             this.logoutButton.Text = "Logout";
             this.logoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // usernameLabel
             // 
@@ -325,6 +326,25 @@
             this.profileButton.Size = new System.Drawing.Size(70, 33);
             this.profileButton.TabIndex = 0;
             this.profileButton.UseVisualStyleBackColor = true;
+            // 
+            // managerSaleUserControl1
+            // 
+            this.managerSaleUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.managerSaleUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerSaleUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managerSaleUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerSaleUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.managerSaleUserControl1.Name = "managerSaleUserControl1";
+            this.managerSaleUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerSaleUserControl1.TabIndex = 3;
+            // 
+            // managerHomeUserControl1
+            // 
+            this.managerHomeUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managerHomeUserControl1.Location = new System.Drawing.Point(194, 48);
+            this.managerHomeUserControl1.Name = "managerHomeUserControl1";
+            this.managerHomeUserControl1.Size = new System.Drawing.Size(690, 428);
+            this.managerHomeUserControl1.TabIndex = 2;
             // 
             // managerCreditPaymentUserControl1
             // 
@@ -378,25 +398,6 @@
             this.managerProductsUserControl1.Name = "managerProductsUserControl1";
             this.managerProductsUserControl1.Size = new System.Drawing.Size(884, 476);
             this.managerProductsUserControl1.TabIndex = 4;
-            // 
-            // managerSaleUserControl1
-            // 
-            this.managerSaleUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.managerSaleUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.managerSaleUserControl1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managerSaleUserControl1.Location = new System.Drawing.Point(194, 48);
-            this.managerSaleUserControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.managerSaleUserControl1.Name = "managerSaleUserControl1";
-            this.managerSaleUserControl1.Size = new System.Drawing.Size(690, 428);
-            this.managerSaleUserControl1.TabIndex = 3;
-            // 
-            // managerHomeUserControl1
-            // 
-            this.managerHomeUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.managerHomeUserControl1.Location = new System.Drawing.Point(194, 48);
-            this.managerHomeUserControl1.Name = "managerHomeUserControl1";
-            this.managerHomeUserControl1.Size = new System.Drawing.Size(690, 428);
-            this.managerHomeUserControl1.TabIndex = 2;
             // 
             // ManagerApp
             // 

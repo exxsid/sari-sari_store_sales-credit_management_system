@@ -259,5 +259,10 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
         {
             FromPage.Show();
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
