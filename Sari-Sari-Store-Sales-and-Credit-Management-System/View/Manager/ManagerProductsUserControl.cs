@@ -39,8 +39,8 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             NewProductForm addProd = new NewProductForm();
             addProd.Show();
 
-            
-            
+
+
         }
 
         private void updateProductButton_Click(object sender, EventArgs e)
@@ -104,11 +104,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                 return;
             }
 
-            int prodIdSelected = int.Parse( productsDataGrid.SelectedRows[0].Cells[0].Value.ToString());
+            int prodIdSelected = int.Parse(productsDataGrid.SelectedRows[0].Cells[0].Value.ToString());
             MySqlConnection conn = DBConnector.Connector();
 
             string currStatusQuery = productsDataGrid.SelectedRows[0].Cells[5].Value.ToString();
-            
+
             conn.Open();
             string query = "UPDATE products " +
                 "SET status = @status " +
@@ -159,6 +159,17 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             productsDataGrid.DataSource = table;
             conn.Close();
             SetTableHeader();
+        }
+
+        private void ManagerProductsUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                ProductDAO productDao = new ProductDAO();
+
+                productsDataGrid.DataSource = productDao.GetProducts();
+                SetTableHeader();
+            }
         }
     }
 }

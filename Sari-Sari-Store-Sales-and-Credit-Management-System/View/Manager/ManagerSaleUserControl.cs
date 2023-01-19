@@ -52,7 +52,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             MySqlConnection conn = DBConnector.Connector();
             conn.Open();
 
-            string query = "SELECT name FROM products;";
+            string query = "SELECT name FROM products WHERE status = 'Available';";
             var cmd = new MySqlCommand(query, conn);
 
             var reader = cmd.ExecuteReader();
@@ -74,7 +74,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
             AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
             // add the product names to the collection
-            string query = "SELECT name FROM products;";
+            string query = "SELECT name FROM products WHERE status = 'Available';";
             var cmd = new MySqlCommand(query, conn);
 
             var reader = cmd.ExecuteReader();
@@ -516,6 +516,16 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             {
                 MessageBox.Show("Invalid Payment Value. Please enter a valid positive amount.");
                 paymentTextbox.Focus();
+            }
+        }
+
+        private void ManagerSaleUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                InitializeAutoCompleteProduct();
+                InitializeProductComboboxItems();
+                InitializeCustomerComboboxItems();
             }
         }
     }

@@ -74,5 +74,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
             creditAnalyticsDatagridView.DataSource = table;
         }
+
+        private void ManagerCreditAnalyticsUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                PopulateTable();
+            }
+        }
     }
 }

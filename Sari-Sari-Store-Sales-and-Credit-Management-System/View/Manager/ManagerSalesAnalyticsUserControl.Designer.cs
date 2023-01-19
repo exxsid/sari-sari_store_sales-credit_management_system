@@ -162,6 +162,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerSalesAnalyticsUserControl";
             this.Size = new System.Drawing.Size(675, 403);
+            this.VisibleChanged += new System.EventHandler(this.ManagerSalesAnalyticsUserControl_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.salesAnalyticsDatagridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topSellingDataGridView)).EndInit();
             this.ResumeLayout(false);

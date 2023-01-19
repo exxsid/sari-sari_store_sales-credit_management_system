@@ -136,6 +136,7 @@
             this.Name = "ManagerProductsUserControl";
             this.Size = new System.Drawing.Size(675, 403);
             this.Load += new System.EventHandler(this.ManagerProductsUserControl_Load);
+            this.VisibleChanged += new System.EventHandler(this.ManagerProductsUserControl_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

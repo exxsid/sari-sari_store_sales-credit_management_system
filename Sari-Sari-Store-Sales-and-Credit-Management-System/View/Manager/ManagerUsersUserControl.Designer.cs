@@ -135,6 +135,7 @@
             this.Name = "ManagerUsersUserControl";
             this.Size = new System.Drawing.Size(675, 403);
             this.Load += new System.EventHandler(this.ManagerUsersUserControl_Load);
+            this.VisibleChanged += new System.EventHandler(this.ManagerUsersUserControl_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

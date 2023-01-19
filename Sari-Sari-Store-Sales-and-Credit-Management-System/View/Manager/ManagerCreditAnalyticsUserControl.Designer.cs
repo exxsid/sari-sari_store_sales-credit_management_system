@@ -94,6 +94,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerCreditAnalyticsUserControl";
             this.Size = new System.Drawing.Size(675, 403);
+            this.VisibleChanged += new System.EventHandler(this.ManagerCreditAnalyticsUserControl_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.creditAnalyticsDatagridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

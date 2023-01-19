@@ -156,5 +156,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             _connection.Close();
             SetTableHeader();
         }
+
+        private void ManagerUsersUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                PopulateUsersTable();
+            }
+        }
     }
 }

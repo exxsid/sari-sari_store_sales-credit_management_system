@@ -161,5 +161,13 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 
             conn.Close();
         }
+
+        private void ManagerSalesAnalyticsUserControl_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                PopulateSaleAnalyticsDataGrid();
+            }
+        }
     }
 }

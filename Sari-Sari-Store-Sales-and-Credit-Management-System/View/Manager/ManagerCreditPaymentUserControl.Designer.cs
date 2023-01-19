@@ -154,6 +154,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManagerCreditPaymentUserControl";
             this.Size = new System.Drawing.Size(675, 403);
+            this.VisibleChanged += new System.EventHandler(this.ManagerCreditPaymentUserControl_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
