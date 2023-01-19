@@ -12,6 +12,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
         {
             InitializeComponent();
             InitializeCustomerNameCombobox();
+            AutocompleteForCustomerName();
         }
 
         private void InitializeCustomerNameCombobox()
@@ -31,6 +32,31 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             }
 
             nameCombox.DataSource = nameList;
+
+            conn.Close();
+        }
+
+        private void AutocompleteForCustomerName()
+        {
+            MySqlConnection conn = DBConnector.Connector();
+            conn.Open();
+
+            AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
+            // add the product names to the collection
+            string query = "SELECT name FROM customers;";
+            var cmd = new MySqlCommand(query, conn);
+
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                autoComplete.Add(reader.GetString(0));
+            }
+
+            // set the autoComplete object to the combobox
+            nameCombox.AutoCompleteCustomSource = autoComplete;
+            nameCombox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            nameCombox.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
             conn.Close();
         }
