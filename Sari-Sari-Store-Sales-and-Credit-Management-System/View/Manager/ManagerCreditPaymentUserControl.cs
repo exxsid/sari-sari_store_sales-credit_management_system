@@ -109,6 +109,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             if (!creditAmountReader.HasRows)
             {
                 //MessageBox.Show("Customer is not found");
+                this.creditAmountTextBox.Text = "P 0";
                 conn.Close();
                 return;
             }
@@ -117,7 +118,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                 totalCreditAmount += creditAmountReader.GetDouble(1);
             }
             // set the totalCreditAmount to the credit amount textbox
-            this.creditAmountTextBox.Text = totalCreditAmount.ToString();
+            this.creditAmountTextBox.Text = "P " + totalCreditAmount.ToString();
 
             conn.Close();
 
@@ -137,12 +138,106 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                 return;
             }
 
+            ClearForms();
+        }
+
+        private void ClearForms()
+        {
             // clear all form's input
             nameCombox.ResetText();
             phoneCombox.ResetText();
             phoneCombox.DataSource = null;
             creditAmountTextBox.ResetText();
             paymentTextbox.ResetText();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            // check if all the forms is fill up
+            if (IsFormsFilledUp())
+            {
+                MessageBox.Show("Fill out all text box.");
+                return;
+            }
+
+            // check of payment is more than 0
+            if (double.Parse(paymentTextbox.Text.Trim()) <= 0)
+            {
+                MessageBox.Show("Put payment larger than P 0");
+                return;
+            }
+
+            MySqlConnection conn = DBConnector.Connector();
+            conn.Open();
+
+            double remainingPayment = double.Parse(this.paymentTextbox.Text.Trim());
+
+            // get the list of credit of the customer
+            string creditListQuery = "SELECT * FROM sales " +
+                "JOIN customers ON sales.customer_id = customers.id " +
+                "WHERE sales.amount_due > 0 AND customers.name = @name;";
+            var creditListCmd = new MySqlCommand(creditListQuery, conn);
+            creditListCmd.Parameters.AddWithValue("@name", nameCombox.SelectedValue.ToString().Trim());
+            var creditListReader = creditListCmd.ExecuteReader();
+
+            if (!creditListReader.HasRows)
+            {
+                MessageBox.Show("The customer has no credit");
+                ClearForms();
+                return;
+            }
+            double remainingCredit = 0;
+
+            MySqlConnection conn2 = DBConnector.Connector();
+            conn2.Open();
+            while (creditListReader.Read())
+            {
+                if (remainingPayment > 0)
+                {
+                    // update the amount_due in the sales table
+
+                    string updateCreditQuery = "UPDATE sales " +
+                        "JOIN customers ON sales.customer_id = customers.id " +
+                        "SET sales.amount_due = @newAmountDue " +
+                        "WHERE sales.id = @id; " +
+                        "INSERT INTO payment (sale_id, amount, payment_type) " +
+                        "VALUE (@salesID, @amount, 'Credit'); ";
+                    var updateCreditCmd = new MySqlCommand(updateCreditQuery, conn2);
+                    updateCreditCmd.Parameters.AddWithValue("@id", creditListReader.GetInt32("id"));
+                    // 
+                    if (remainingPayment >= creditListReader.GetDouble("amount_due"))
+                    {
+                        updateCreditCmd.Parameters.AddWithValue("@newAmountDue", 0);
+                        remainingPayment -= creditListReader.GetDouble("amount_due");
+                        updateCreditCmd.Parameters.AddWithValue("@salesID", creditListReader.GetString("id"));
+                        updateCreditCmd.Parameters.AddWithValue("@amount", creditListReader.GetDouble("amount_due"));
+                    }
+                    else
+                    {
+                        updateCreditCmd.Parameters.AddWithValue("@newAmountDue",
+                            creditListReader.GetDouble("amount_due") - remainingPayment);
+                        updateCreditCmd.Parameters.AddWithValue("@salesID", creditListReader.GetString("id"));
+                        updateCreditCmd.Parameters.AddWithValue("@amount", remainingPayment);
+                        remainingPayment = 0;
+                    }
+                    var result = updateCreditCmd.ExecuteNonQuery();
+                    continue;
+                }
+                remainingCredit += creditListReader.GetDouble("amount_due");
+
+            }
+            conn2.Close();
+
+            MessageBox.Show("Successfully save the credit payment\n" +
+                "Remaining credit: P" + remainingCredit);
+            ClearForms();
+        }
+
+        private bool IsFormsFilledUp()
+        {
+            return string.IsNullOrEmpty(nameCombox.Text.Trim()) ||
+                string.IsNullOrEmpty(phoneCombox.Text.Trim()) ||
+                string.IsNullOrEmpty(paymentTextbox.Text.Trim());
         }
     }
 }
