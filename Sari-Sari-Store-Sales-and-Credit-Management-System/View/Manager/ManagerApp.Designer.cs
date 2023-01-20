@@ -416,7 +416,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ManagerApp";
             this.Text = "ManagerApp";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerApp_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManagerApp_FormClosed);
             this.Load += new System.EventHandler(this.ManagerApp_Load);
             this.sideNavBar.ResumeLayout(false);
             this.analyticsSubMenu.ResumeLayout(false);

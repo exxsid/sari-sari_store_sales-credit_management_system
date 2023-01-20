@@ -34,10 +34,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
             string query = "SELECT " +
                 "name as 'Customer Name', " +
                 "phone_number as 'Phone Number', " +
-                "amount_due as 'Amount Due' " +
+                "SUM(amount_due) as 'Amount Due' " +
                 "FROM sales " +
                 "JOIN customers ON sales.customer_id = customers.id " +
                 "WHERE sales.amount_due > 0 " +
+                "GROUP BY 1 " +
                 "ORDER BY 3 DESC;";
             var cmd = new MySqlCommand(query, conn);
             var reader = cmd.ExecuteReader();

@@ -13,6 +13,7 @@ using Sari_Sari_Store_Sales_and_Credit_Management_System.Model;
 using Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager.ProductForms;
 using MySql.Data.MySqlClient;
 using System.Data.Common;
+using System.Windows.Controls.Primitives;
 
 namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
 {
@@ -149,8 +150,14 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View.Manager
                 return;
             }
 
-            string query = "SELECT * " +
+            string query = "SELECT products.id, " +
+                "products.name, " +
+                "products.quantity, " +
+                "products.retail_price, " +
+                "purchase.wholesale_price, " +
+                "products.status " +
                 "FROM products " +
+                "LEFT JOIN purchase ON purchase.product_id = products.id " +
                 "WHERE name LIKE '%" + searchBar.Text.Trim() + "%';";
             var cmd = new MySqlCommand(query, conn);
             var reader = cmd.ExecuteReader();

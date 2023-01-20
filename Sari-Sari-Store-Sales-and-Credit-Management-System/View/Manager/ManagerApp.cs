@@ -133,7 +133,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
             // set the back color
             setToActiveButtonBackColor(this.analyticsButton);
 
-            
+
 
         }
 
@@ -153,7 +153,7 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
 
         private void creditAnalyticsButton_Click(object sender, EventArgs e)
         {
-            
+
             // show the analytics page
             this.managerCreditAnalyticsUserControl1.Show();
             this.managerCreditAnalyticsUserControl1.BringToFront();
@@ -257,12 +257,30 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System.View
 
         private void ManagerApp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FromPage.Show();
+            if (isLogoutClicked)
+            {
+                FromPage.Show();
+            }
+            FromPage.Close();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
+            // message box changing status of the product
+            DialogResult cancelConfirmation = MessageBox.Show("Are you sure you want to logout?",
+                                   "Confirmation", MessageBoxButtons.OKCancel);
+            // when the user click cancel
+            // the new user form will not close
+            if (cancelConfirmation == DialogResult.Cancel)
+            {
+                return;
+            }
             this.Close();
+        }
+
+        private void ManagerApp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FromPage.Show();
         }
     }
 }

@@ -27,11 +27,11 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 
         private void CashierDash_Load(object sender, EventArgs e)
         {
-            
+
             // at start time, home button is the defaul selected
             // set the home button's back color to active at start
             this.homeButton.BackColor = ACTIVE_BUTTON_BACK_COLOR;
-            
+
             // show the home page
             this.cashierHomeTab1.Show();
             this.cashierHomeTab1.BringToFront();
@@ -128,6 +128,15 @@ namespace Sari_Sari_Store_Sales_and_Credit_Management_System
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
+            // message box changing status of the product
+            DialogResult cancelConfirmation = MessageBox.Show("Are you sure you want to logout?",
+                                   "Confirmation", MessageBoxButtons.OKCancel);
+            // when the user click cancel
+            // the new user form will not close
+            if (cancelConfirmation == DialogResult.Cancel)
+            {
+                return;
+            }
             this.Close();
         }
 
